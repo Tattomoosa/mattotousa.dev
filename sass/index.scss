@@ -1,18 +1,11 @@
 @import "./layout.scss";
 @import "./project-thumbnail.scss";
 
-$bg-color: #334;
-$nav-color: lighten($bg-color, 5);
-
 // reset
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: $bg-color;
 }
 
 // base styles

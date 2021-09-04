@@ -1,4 +1,6 @@
 $bg-color: #1c1c1c;
+$separator-line: #101010;
+
 $text-color: #bbb;
 $hover-link: #a5d1e6;
 $active-link: #ff69dc;
@@ -7,6 +9,13 @@ $nav-color: #1f1f1f;
 
 $nav-height: 50px;
 $footer-height: 50px;
+
+$bg-color: #334;
+$nav-color: #223;
+
+$bg-color: #223;
+$nav-color: #223;
+$nav-line: #334;
 
 body {
   padding: 0;
@@ -30,6 +39,9 @@ body {
 .nav-logo {
   padding-top: 10px;
   color: $text-color;
+  &:visited {
+    color: $text-color;
+  }
   text-decoration: none;
   @media screen and (max-width: 800px) {
     padding-left: 10px;
@@ -44,7 +56,7 @@ body {
 .nav-bar {
   position: fixed;
   background: $nav-color;
-  border-bottom: 1px solid #0c0c0c;
+  border-bottom: 1px solid $nav-line;
   height: $nav-height;
   width: 100%;
   z-index: 9999;
@@ -77,7 +89,7 @@ footer {
   bottom: 0;
   width: 100%;
   padding-top: 16px;
-  border-top: 1px solid $nav-color;
+  border-top: 1px solid $nav-line;
 }
 
 .nav-links {
