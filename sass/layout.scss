@@ -1,0 +1,97 @@
+$bg-color: #1c1c1c;
+$text-color: #bbb;
+$hover-link: #a5d1e6;
+$active-link: #ff69dc;
+
+$nav-color: #1f1f1f;
+
+$nav-height: 50px;
+
+body {
+  padding: 0;
+  margin: 0;
+  background: $bg-color;
+  color: $text-color;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  margin-left: calc(50vw - 400px);
+  max-width: 800px;
+  font-family: sans-serif;
+}
+
+.heading {
+  color: rebeccapurple;
+}
+
+.nav-logo {
+  padding-top: 10px;
+  color: $text-color;
+  // line-height: $nav-height;
+}
+
+.nav-logo-subscript {
+  color: grey;
+  font-size: 70%;
+}
+
+.nav-bar {
+  position: relative;
+  background: $nav-color;
+  height: $nav-height;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.fill-under-nav {
+  height: calc(100vh - #{$nav-height});
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: $nav-height;
+}
+
+.nav-spacer {
+  flex-grow: 1;
+}
+
+.nav-link-item {
+  margin: 0 10px;
+  height: 100%;
+}
+
+.nav-link-text {
+  display: inline-block;
+  color: $text-color;
+  text-decoration: none;
+  line-height: $nav-height;
+  transition-property: transform, color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  &:hover {
+    color: $hover-link;
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  &:active,
+  &.nav-link-active {
+    color: $active-link;
+    transition-duration: 0.1s;
+    transform: scale3d(1.2, 1.2, 1) rotate(5deg);
+    // transform: rotate(10deg);
+  }
+}
