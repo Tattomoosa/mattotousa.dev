@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf8">
+    <title>Matt O'Tousa's Site</title>
+    <link rel="stylesheet" href="base.css" />
+</head>
+
+<body>
+    <script>
+        console.log("Tera context:", `{{ __tera_context }}`);
+    </script>
+
+    <!-- Nav Bar -->
+    <nav class="top-nav">
+        <div class="left-content">Matt O'Tousa</div>
+        <div class="spacer"></div>
+        <div class="right-content">
+            <a href="/">
+                <input type="button" value="Home" />
+            </a>
+            <a href="/blog">
+                <input type="button" value="Blog" />
+            </a>
+            <a href="/projects">
+                <input type="button" value="Projects" />
+            </a>
+        </div>
+    </nav>
+
+    <!-- Per-page content -->
+    <section class="section">
+        <div class="container">
+            {% block content %} {% endblock %}
+        </div>
+    </section>
+
+</body>
+
+</html>
