@@ -1,17 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-    {{ section.title }}
-</h1>
-<ul>
-    {% for page in section.pages %}
-    <li>
-        <img src="{{ page.permalink }}/thumbnail.png" />
-        <a href="{{ page.permalink | safe }}">
-            {{ page.title }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <h1 class="title">
+        {{ section.title }}
+    </h1>
+
+    <h5 class="title-subscript">
+        (Work/School/Personal)
+    </h5>
+
+    <br />
+    <br />
+    <br />
+    <ul class="project-thumbnail-list">
+        {% for page in section.pages %}
+        <li class="project-thumbnail">
+            <a href="{{ page.permalink | safe }}">
+                <div class="project-name-text">{{ page.title }}</div>
+                <img src="{{ page.permalink }}/thumbnail.png" />
+                <div class="mask"></div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock content %}

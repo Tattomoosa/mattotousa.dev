@@ -6,6 +6,7 @@ $active-link: #ff69dc;
 $nav-color: #1f1f1f;
 
 $nav-height: 50px;
+$footer-height: 50px;
 
 body {
   padding: 0;
@@ -13,25 +14,26 @@ body {
   background: $bg-color;
   color: $text-color;
   box-sizing: border-box;
+  font-family: sans-serif;
   * {
     box-sizing: border-box;
   }
 }
 
 .container {
-  margin-left: calc(50vw - 400px);
-  max-width: 800px;
-  font-family: sans-serif;
-}
-
-.heading {
-  color: rebeccapurple;
+  max-width: 1200px;
+  @media screen and (min-width: 1200px) {
+    margin-left: calc(50vw - 600px);
+  }
 }
 
 .nav-logo {
   padding-top: 10px;
   color: $text-color;
-  // line-height: $nav-height;
+  text-decoration: none;
+  @media screen and (max-width: 800px) {
+    padding-left: 10px;
+  }
 }
 
 .nav-logo-subscript {
@@ -40,10 +42,12 @@ body {
 }
 
 .nav-bar {
-  position: relative;
+  position: fixed;
   background: $nav-color;
+  border-bottom: 1px solid #0c0c0c;
   height: $nav-height;
   width: 100%;
+  z-index: 9999;
 }
 
 .flex {
@@ -54,8 +58,26 @@ body {
   overflow: scroll;
 }
 
+/*
 .fill-under-nav {
   height: calc(100vh - #{$nav-height});
+}
+*/
+
+.fill-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: $nav-height;
+  padding-bottom: $footer-height;
+}
+
+footer {
+  height: $footer-height;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid $nav-color;
 }
 
 .nav-links {
@@ -83,6 +105,9 @@ body {
   transition-property: transform, color;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
+  &:visited {
+    color: $text-color;
+  }
   &:hover {
     color: $hover-link;
     transform: scale3d(1.1, 1.1, 1);
@@ -94,4 +119,24 @@ body {
     transform: scale3d(1.2, 1.2, 1) rotate(5deg);
     // transform: rotate(10deg);
   }
+}
+
+.title {
+  font-weight: normal;
+  font-size: 80px;
+  margin-top: 100px;
+}
+
+.title-subscript {
+  font-weight: normal;
+  font-size: 18px;
+  color: grey;
+  width: 50%;
+  padding: 10px 0;
+}
+
+.banner-image {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
 }

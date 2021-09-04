@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf8">
-    <title>Matt O'Tousa's Site</title>
-    <link rel="stylesheet" href={{ get_url(path="base.css" ) }} />
+    <title>Matt O'Tousa | Software Engineer</title>
+    <link rel="stylesheet" href={{ get_url(path="index.css" ) }} />
 </head>
 
 <body>
@@ -13,28 +13,49 @@
     </script>
 
     <!-- Nav Bar -->
-    <nav class="top-nav">
-        <div class="left-content">Matt O'Tousa</div>
-        <div class="spacer"></div>
-        <div class="right-content">
-            <a href="/">
-                <input type="button" value="Home" />
+    <nav class="nav-bar">
+        <div class="container flex">
+
+            <a href="/" class="nav-logo">
+                Matt O'Tousa
+                <div class="nav-logo-subscript">Software Engineer</div>
             </a>
-            <a href="/blog">
-                <input type="button" value="Blog" />
-            </a>
-            <a href="/projects">
-                <input type="button" value="Projects" />
-            </a>
+
+            <div class="nav-spacer"></div>
+
+            <ul class="nav-links">
+                <li class="nav-link-item">
+                    <a href="/" class="nav-link-text">
+                        Home
+                    </a>
+                <li class="nav-link-item">
+                    <a href="/blog" class="nav-link-text">
+                        Blog
+                    </a>
+                </li>
+                <li class="nav-link-item">
+                    <a href="/projects" class="nav-link-text">
+                        Projects
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </nav>
 
-    <!-- Per-page content -->
-    <section class="section">
-        <div class="container">
+    <div class="fill-page">
+
+        <!-- Per-page content -->
+        <section class="section">
             {% block content %} {% endblock %}
-        </div>
-    </section>
+        </section>
+
+        <footer>
+            <div class="container">
+                Made with <a href="https://www.getzola.org/">Zola</a>
+            </div>
+        </footer>
+    </div>
 
 </body>
 
