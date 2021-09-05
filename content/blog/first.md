@@ -1,27 +1,57 @@
 +++
-title = "New Degree, New Blog, Same Old Me"
+title = "I've got a Masters, but I Ain't a Master"
 date = 2019-11-27
 +++
 
-So I just got a Master's degree.
+So I just got a Master's degree last week.
 It feels good to be done.
 I got to work on a lot of really cool projects and I met a bunch of really great people.
-But computer science is huge, and I certainly don't feel like I've mastered it.
+But I don't feel like a *master*, by any means.
 
-I think this is part of why so-called "Imposter Syndrome" is so prevalent in this
-industry.
+I mean, Computer Science is huge.
 No one can really hope to know it all.
-Even in a relatively tiny domain -- think not "Web development" but smaller, maybe "Web accessibility", or maybe that's still too large -- very few of us know it all.
+Even in a relatively tiny domain --
+think not "Web development" but smaller,
+maybe "Web accessibility",
+or maybe that's too large still.
 
-But programming, like many other disciplines, means standing on the shoulders of
-giants.
-And competency often involves becoming comfortable with how much you don't know.
-This might take a bit of an explanation.
+But programming, like many other disciplines, means standing on the shoulders of giants.
+And honestly, one of the most important things I got out of my education was actually
+becoming much more comfortable with how much I *don't* know.
 
 <!-- more -->
 
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+I used to spend long hours writing code.
+These days, as a *master*, I feel like I spend more hours reading documentation.
+The actual writing of the code, by the time I have a plan and understand how my dependencies work,
+tends to go extremely fast.
+But this change has more to do with my reluctance as a beginner to use libraries than any sort
+of mastery over the domain of code itself.
 
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+Because as a beginner I thought if I just understood enough, then I'd be *good*.
+10x programmer material or whatever.
+That writing everything with only the standard library to depend on was teaching me, little by little, everything.
+This was, shockingly, a dead end.
+So I thought I hit a wall, and needed an instructor, to understand it all,
+and I went to school.
+I didn't understand then,
+and I wouldn't understand for at least a year,
+that I simply couldn't hope to know everything, and I never would.
 
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+The human brain simply isn't that big.
+
+So, in some ways I feel like I've grown tremendously, while in others I feel like
+I haven't grown at all.
+Some of my projects before I landed in school still feel more impressive than
+some of the things I've done lately -- even though I know they're only tied together with
+duct tape and good luck.
+
+I think in some ways this was school limiting my scope often to only a couple weeks
+for a thing,
+not to mention needing to juggle that and work making it difficult to even think about
+doing longer term projects.
+But I do wonder if it also has something to do with just *jumping in* and *doing something*
+instead of poking around and wondering which language or library will really make it easy.
+
+This site is a good example of this. I made very simple sites in 
+
