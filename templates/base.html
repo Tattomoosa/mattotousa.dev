@@ -5,6 +5,7 @@
     <meta charset="utf8">
     <title>Matt O'Tousa | Software Engineer</title>
     <link rel="stylesheet" href={{ get_url(path="index.css" ) }} />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 
 <body>
@@ -21,20 +22,22 @@
                 <div class="nav-logo-subscript">Software Engineer</div>
             </a>
 
-            <div class="nav-spacer"></div>
+            <div class="flex-spacer"></div>
 
             <ul class="nav-links">
                 <li class="nav-link-item">
-                    <a href="/" class="nav-link-text">
-                        Home
-                    </a>
-                <li class="nav-link-item">
-                    <a href="/blog" class="nav-link-text">
+                    <a
+                        href="/blog"
+                        class="nav-link-text {% if current_path is starting_with('/blog')%} nav-link-active {% endif %}"
+                    >
                         Blog
                     </a>
                 </li>
                 <li class="nav-link-item">
-                    <a href="/projects" class="nav-link-text">
+                    <a
+                        href="/projects"
+                        class="nav-link-text {% if current_path is starting_with('/projects')%} nav-link-active {% endif %}"
+                    >
                         Projects
                     </a>
                 </li>
@@ -46,15 +49,54 @@
     <div class="fill-page">
 
         <!-- Per-page content -->
-        <section class="section">
-            {% block content %} {% endblock %}
-        </section>
+        {% block content %} {% endblock %}
 
         <footer>
-            <div class="container">
-                Made with <a href="https://www.getzola.org/">Zola</a>
+            <div class="container flex">
+                <div class="made-with">
+                    Made with <a href="https://www.getzola.org/">Zola</a>
+                </div>
+                <div class="flex-spacer"></div>
+                <ul class="nav-links">
+                    <li>
+                        <a class="icon-link nav-link-text">
+                            <i class="lab la-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link nav-link-text" href="https://github.com/Tattomoosa">
+                            <i class="lab la-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link nav-link-text" href="https://codepen.io/Tattomoosa">
+                            <i class="lab la-codepen"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link nav-link-text">
+                            <i class="lab la-stack-overflow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link nav-link-text">
+                            <i class="lab la-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link nav-link-text">
+                            <i class="lab la-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link nav-link-text">
+                            <i class="las la-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </footer>
+
     </div>
 
 </body>

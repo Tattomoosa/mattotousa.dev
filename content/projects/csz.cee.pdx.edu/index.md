@@ -1,5 +1,5 @@
 +++
-title = "CSZ@PDX"
+title = "CSZ@PDX (Earthquake Research)"
 weight = 10
 date = 2021-09-20
 start_date = 2018-06-01

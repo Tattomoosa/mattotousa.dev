@@ -1,21 +1,4 @@
-$bg-color: #1c1c1c;
-$separator-line: #101010;
-
-$text-color: #bbb;
-$hover-link: #a5d1e6;
-$active-link: #ff69dc;
-
-$nav-color: #1f1f1f;
-
-$nav-height: 50px;
-$footer-height: 50px;
-
-$bg-color: #334;
-$nav-color: #223;
-
-$bg-color: #223;
-$nav-color: #223;
-$nav-line: #334;
+@import "./_variables.scss";
 
 body {
   padding: 0;
@@ -24,6 +7,7 @@ body {
   color: $text-color;
   box-sizing: border-box;
   font-family: sans-serif;
+  overflow-x: hidden;
   * {
     box-sizing: border-box;
   }
@@ -31,21 +15,34 @@ body {
 
 .container {
   max-width: 1200px;
-  @media screen and (min-width: 1200px) {
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 1221px) {
     margin-left: calc(50vw - 600px);
   }
+
+  @media screen and (max-width: 1220px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    &.no-mobile-padding {
+        padding: 0;
+    }
+  }
+
 }
 
 .nav-logo {
   padding-top: 10px;
   color: $text-color;
+  transition: 0.2s;
   &:visited {
     color: $text-color;
   }
-  text-decoration: none;
-  @media screen and (max-width: 800px) {
-    padding-left: 10px;
+  &:hover {
+    color: white;
   }
+  text-decoration: none;
 }
 
 .nav-logo-subscript {
@@ -70,27 +67,22 @@ body {
   overflow: scroll;
 }
 
-/*
-.fill-under-nav {
-  height: calc(100vh - #{$nav-height});
-}
-*/
-
 .fill-page {
   position: relative;
-  min-height: 100vh;
+  // TODO why does it need -3px to fit footer on no-scroll blog page?
+  min-height: calc(100vh - 3px);
   padding-top: $nav-height;
   padding-bottom: $footer-height;
 }
 
-footer {
-  height: $footer-height;
+.fill-parent {
   position: absolute;
+  top: 0;
   bottom: 0;
-  width: 100%;
-  padding-top: 16px;
-  border-top: 1px solid $nav-line;
+  left: 0;
+  right: 0;
 }
+
 
 .nav-links {
   display: flex;
@@ -100,7 +92,7 @@ footer {
   height: $nav-height;
 }
 
-.nav-spacer {
+.flex-spacer {
   flex-grow: 1;
 }
 
@@ -124,12 +116,13 @@ footer {
     color: $hover-link;
     transform: scale3d(1.1, 1.1, 1);
   }
-  &:active,
-  &.nav-link-active {
+  &:active {
     color: $active-link;
     transition-duration: 0.1s;
     transform: scale3d(1.2, 1.2, 1) rotate(5deg);
-    // transform: rotate(10deg);
+  }
+  &.nav-link-active {
+    color: $active-link;
   }
 }
 
@@ -149,6 +142,31 @@ footer {
 
 .banner-image {
   width: 100vw;
+  overflow: none;
   height: 50vh;
   object-fit: cover;
+}
+
+footer {
+  overflow-y: hidden;
+  height: $footer-height;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid $nav-line;
+  padding-top: 2px;
+  background: $bg-color;
+  .made-with {
+    margin-top: 14px;
+  }
+}
+
+.icon-link {
+  font-size: 32px;
+  margin: 0;
+  color: $text-color;
+  i {
+    margin: 0;
+    padding: 0;
+  }
 }

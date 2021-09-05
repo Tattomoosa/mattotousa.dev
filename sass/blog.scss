@@ -1,19 +1,117 @@
+@import "./_variables.scss";
+
+$sidebar-width: 450px;
+$sidebar-skinny-width: 320px;
+$sidebar-skinny-switch: 1200px;
+
+$sidebar-vpad: 53px;
+$content-padding: 30px;
+$mobile-content-padding: 0;
+
+$blog-break-to-mobile: 800px;
+
 .blog-list {
 	list-style: none;
 }
 
+@import "./_variables.scss";
+
 .blog-summary {
+	width: 100%;
+	display: block;
 	text-decoration: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	h1 {
 		text-decoration: underline;
 		margin-bottom: 10px;
 	}
-	h2 {
+	h6 {
+		color: grey;
+	}
+	p {
+		color: $text-color;
 	}
 	.blog-summary-title {
 		display: flex;
 	}
 }
 
-.blog-list li p {
+hr.blog-summary-separator {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid $nav-line;
+}
+
+.blog-sidebar {
+	h1 {
+		margin: 0;
+	}
+	.date {
+		color: grey;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	// desktop
+	@media screen and (min-width: $blog-break-to-mobile) {
+		position: fixed;
+		width: $sidebar-width;
+		min-height: calc(100vh - 50px);
+		padding-top: $sidebar-vpad;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: $sidebar-vpad;
+			right: 0;
+			top: $sidebar-vpad;
+			width: 0;
+			border-right: 1px solid $nav-line;
+		}
+		.blog-sidebar-content {
+			max-width: $sidebar-width - 80px;
+		}
+		h1 {
+			font-size: 24px;
+		}
+	}
+	@media screen and (max-width: $sidebar-skinny-switch) {
+		width: $sidebar-skinny-width;
+	}
+	// mobile
+	@media screen and (max-width: $blog-break-to-mobile) {
+		margin-top: 80px;
+		padding: $mobile-content-padding;
+		h1 {
+			font-size: 32px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.blog-content-container {
+	line-height: 1.6;
+	padding: $content-padding;
+	padding-top: 80px;
+
+	// desktop
+	@media screen and (min-width: $blog-break-to-mobile) {
+		margin-left: $sidebar-width;
+		@media screen and (max-width: $sidebar-skinny-switch) {
+			margin-left: $sidebar-skinny-width;
+		}
+	}
+
+	// mobile 
+	@media screen and (max-width: $blog-break-to-mobile) {
+		max-width: 800px;
+		padding: $mobile-content-padding;
+	}
+}
+
+.blog-content {
+	// background: rgba(white, 0.1);
+	p {
+		margin: 14px 0 0;
+		font-size: 18px;
+	}
 }

@@ -2,9 +2,7 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="title">
-        {{ section.title }}
-    </h1>
+    <h1 class="title">{{ section.title }}</h1>
     <br />
     <br />
     <br />
@@ -14,10 +12,11 @@
             <a class="blog-summary" href="{{ page.permalink | safe }}">
                 <h6>{{ page.date }}</h6>
                 <h1>{{ page.title }}</h1>
-                {{ page.summary | safe }}
+                <div class="blog-content">
+                    {{ page.summary | safe }}
+                </div>
             </a>
-            <br />
-            <br />
+            <hr class="blog-summary-separator" />
         </li>
         {% endfor %}
     </ul>

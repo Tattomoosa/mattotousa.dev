@@ -3,13 +3,22 @@
 {% block content %}
 <div class="container">
 
-    <h1 class="title">
-        {{ page.title }}
-    </h1>
-    <p class="subtitle">
-        {{ page.date }}
-    </p>
-    {{ page.content | safe }}
+    <div class="blog-sidebar">
+        <div class="blog-sidebar-content">
+            <h6 class="date">
+                {{ page.date }}
+            </h6>
+            <h1 class="title">
+                {{ page.title }}
+            </h1>
+        </div>
+    </div>
+
+    <div class="blog-content-container">
+        <div class="blog-content">
+            {{ page.content | safe }}
+        </div>
+    </div>
 
 </div>
 {% endblock content %}
