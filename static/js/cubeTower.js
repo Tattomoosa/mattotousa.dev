@@ -1,4 +1,4 @@
-const ANTIALIAS = false;
+const ANTIALIAS = true;
 
 const LINE_COLOR = 0x777799;
 
