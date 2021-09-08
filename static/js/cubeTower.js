@@ -1,4 +1,5 @@
-const LINE_COLOR = 0xbbbbbb;
+// const LINE_COLOR = 0xbbbbbb;
+const LINE_COLOR = 0x777799;
 
 // const CUBE_COLOR = 0x333344;
 const CUBE_COLOR = LINE_COLOR;
