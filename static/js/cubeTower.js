@@ -5,10 +5,10 @@ const LINE_COLOR = 0x777799;
 const CUBE_COLOR = LINE_COLOR;
 const TOWER_COLOR = LINE_COLOR;
 
-const GRAVITY = 0.0004 * 150;
+const GRAVITY = 0.06;
 // TODO get from screen pixel to ensure offscreen
 
-const TOWER_SPIN_SPEED = 0.014 * 150;
+const TOWER_SPIN_SPEED = 2.1;
 const TOWER_DROP_SPEED = 1.5;
 const TOWER_TOP = -1;
 const TOWER_HEIGHT = 5;
@@ -81,10 +81,8 @@ tower.position.y = TOWER_POSITION_Y;
 root.add(tower);
 
 const onResize = () => {
-  // camera.aspect = window.innerWidth / window.innerHeight;
   camera.aspect = domRoot.offsetWidth / domRoot.offsetHeight;
   camera.updateProjectionMatrix();
-  // renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setSize(domRoot.offsetWidth, domRoot.offsetHeight);
 };
 // initialize resize listener
@@ -120,12 +118,15 @@ const animate = () => {
       if (tower.rotation.y > DEG_90) tower.rotation.y = -DEG_90;
       if (tower.rotation.y < 0) tower.rotation.y += towerSpinSpeed;
       break;
+
     case "drop2":
       if (tower.rotation.y < DEG_90) tower.rotation.y += towerSpinSpeed;
       break;
+
     case "drop3":
       if (tower.rotation.y < DEG_90 * 2) tower.rotation.y += towerSpinSpeed;
       break;
+
     case "drop4":
       if (tower.rotation.y < DEG_90 * 3) tower.rotation.y += towerSpinSpeed;
       break;
