@@ -58,6 +58,7 @@ const renderer = new THREE.WebGLRenderer({
   antialias: ANTIALIAS,
 });
 // renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(domRoot.offsetWidth, domRoot.offsetHeight);
 renderer.setClearColor(0xffffff, 0);
 domRoot.appendChild(renderer.domElement);
@@ -107,6 +108,7 @@ const animate = () => {
 
   switch (PHASES[currentPhase]) {
     case "drop1":
+      // drop tower if it's not finished dropping
       if (towerNeedsToDrop) {
         tower.position.y -= towerDropSpeed;
         if (tower.position.y <= TOWER_POSITION_Y - 1) {
@@ -136,10 +138,6 @@ const animate = () => {
 
   // cube has landed on tower
   if (cube.position.y < CUBE_STOP_Y) {
-    cube.position.y = CUBE_START_Y;
-    cube.rotation.y = CUBE_START_ROTATION;
-    cubeFallingSpeed = 0;
-
     // TODO instead of adding cubes as children, create a mesh of the tower
     // with each cube during the initialization phase, and just set which
     // is visible based on phase.
@@ -147,6 +145,7 @@ const animate = () => {
     const newCube = cube.clone();
     tower.add(newCube);
     newCube.position.y = TOWER_HEIGHT / 2 + HALF_CUBE_SIZE;
+    newCube.rotation.y = 0;
     switch (PHASES[currentPhase]) {
       case "drop1":
         console.log("DROP1:", newCube.position);
@@ -166,6 +165,11 @@ const animate = () => {
         console.log("DROP4:", newCube.position);
         break;
     }
+
+    // reset falling cube
+    cube.position.y = CUBE_START_Y;
+    cube.rotation.y = CUBE_START_ROTATION;
+    cubeFallingSpeed = 0;
 
     if (++currentPhase >= PHASES.length) currentPhase = 0;
   }
