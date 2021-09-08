@@ -5,7 +5,7 @@ const LINE_COLOR = 0x777799;
 const CUBE_COLOR = LINE_COLOR;
 const TOWER_COLOR = LINE_COLOR;
 
-const GRAVITY = 0.0004;
+const GRAVITY = 0.0004 * 150;
 // TODO get from screen pixel to ensure offscreen
 
 const TOWER_SPIN_SPEED = 0.014 * 150;
@@ -103,6 +103,7 @@ const animate = () => {
   const towerSpinSpeed = TOWER_SPIN_SPEED * delta;
   const towerDropSpeed = TOWER_DROP_SPEED * delta;
   const cubeRotationSpeed = CUBE_ROTATION_SPEED * delta;
+  const gravity = GRAVITY * delta;
 
   switch (PHASES[currentPhase]) {
     case "drop1":
@@ -131,7 +132,7 @@ const animate = () => {
   // update cube
   cube.rotation.y += cubeRotationSpeed;
   cube.position.y -= cubeFallingSpeed;
-  cubeFallingSpeed += GRAVITY;
+  cubeFallingSpeed += gravity;
 
   // cube has landed on tower
   if (cube.position.y < CUBE_STOP_Y) {
