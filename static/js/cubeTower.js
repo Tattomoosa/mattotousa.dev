@@ -136,10 +136,10 @@ const animate = () => {
   cube.rotation.y += cubeRotationSpeed;
   cube.position.y -= cubeFallingSpeed;
   cubeFallingSpeed += gravity;
-  console.log({ cubeFallingSpeed, gravity });
 
   // cube has landed on tower
   if (cube.position.y < CUBE_STOP_Y) {
+    console.log({ cubeFallingSpeed, gravity, delta });
     // TODO instead of adding cubes as children, create a mesh of the tower
     // with each cube during the initialization phase, and just set which
     // is visible based on phase.
