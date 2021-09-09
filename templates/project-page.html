@@ -1,16 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<img src="header.png" class="banner-image" />
-<div class="container">
-    <h1 class="title">
-        {{ page.title }}
-    </h1>
-    <p class="subtitle">
-        {{ page.date }}
-    </p>
-    {{ page.content | safe }}
-</div>
+<img src="header.png" class="background-image" />
+
+<div class="spacer"></div>
+<div class="container no-mobile-padding">
+    <div class="article-paper bg-color">
+
+        <div class="article">
+            <h1 class="title">
+                {{ page.title }}
+            </h1>
+            <p class="subtitle">
+                {{ page.date }}
+            </p>
+            {{ page.content | safe }}
+        </div>
+
+    </div>
 </div>
 
 {% endblock content %}

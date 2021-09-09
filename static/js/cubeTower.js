@@ -57,7 +57,6 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true,
   antialias: ANTIALIAS,
 });
-// renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(domRoot.offsetWidth, domRoot.offsetHeight);
 renderer.setClearColor(0xffffff, 0);
@@ -137,6 +136,7 @@ const animate = () => {
   cube.rotation.y += cubeRotationSpeed;
   cube.position.y -= cubeFallingSpeed;
   cubeFallingSpeed += gravity;
+  console.log({ cubeFallingSpeed, gravity });
 
   // cube has landed on tower
   if (cube.position.y < CUBE_STOP_Y) {

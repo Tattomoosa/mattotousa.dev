@@ -5,6 +5,35 @@
 $thumbnail-width: 380px;
 $thumbnail-height: 280px;
 $thumbnail-mobile-switch: 1200px;
+$spacer-height: 30vh;
+$project-page-break-to-mobile: 800px;
+
+.spacer {
+	height: $spacer-height;
+}
+
+.article-paper {
+	min-height: calc(100vh - #{$nav-height});
+	@media screen and (min-width: $project-page-break-to-mobile) {
+		min-height: calc(100vh - #{$spacer-height} - #{$nav-height})
+	}
+	@media screen and (min-width: 1200px) {
+		margin: 0 200px;
+	}
+	@media screen and (max-width: 1200px) {
+		margin: 0 100px;
+	}
+}
+
+.article {
+	padding-top: 1px;
+	@media screen and (min-width: $project-page-break-to-mobile) {
+		padding: 1px 60px;
+		.title {
+			font-size: 48px;
+		}
+	}
+}
 
 .project-thumbnail-list {
 	list-style: none;

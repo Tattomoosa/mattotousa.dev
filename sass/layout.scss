@@ -21,6 +21,7 @@ body {
 
   @media screen and (min-width: 1221px) {
     margin-left: calc(50vw - 600px);
+    margin-right: calc(50vw - 600px);
   }
 
   @media screen and (max-width: 1220px) {
@@ -154,11 +155,22 @@ body {
   object-fit: cover;
 }
 
+.background-image {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1000;
+  top: 0;
+}
+
 footer {
   overflow-y: hidden;
   height: $footer-height;
   position: absolute;
-  bottom: -3px;
+  bottom: 0;
+  // bottom: -3px;
   width: 100%;
   border-top: 1px solid $nav-line;
   padding-top: 2px;
@@ -166,6 +178,10 @@ footer {
   .made-with {
     margin-top: 14px;
   }
+}
+
+.bg-color {
+  background: $bg-color;
 }
 
 .icon-link {
