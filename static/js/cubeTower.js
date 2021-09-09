@@ -94,6 +94,7 @@ let animationFramesBetweenRenderFrames = 0;
 // run
 const animate = () => {
   requestAnimationFrame(animate);
+  if (document.hidden) return;
 
   // TODO use delta time, going to require updating all animation values unfortunately
   // it's consistently around 0.007 on desktop
