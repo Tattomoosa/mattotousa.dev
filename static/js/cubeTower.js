@@ -18,7 +18,7 @@ const CUBE_SIZE = 1;
 const HALF_CUBE_SIZE = CUBE_SIZE / 2;
 const CUBE_START_Y = 5;
 const CUBE_STOP_Y = TOWER_TOP + HALF_CUBE_SIZE;
-const CUBE_ROTATION_SPEED = 1.35;
+const CUBE_ROTATION_SPEED = 1.508;
 const CUBE_START_ROTATION = 0;
 
 const DEG_90 = Math.PI / 2;
@@ -34,7 +34,6 @@ var towerNeedsToDrop = false;
 const scene = new THREE.Scene();
 
 const clock = new THREE.Clock();
-var lastFrameTime = performance.now();
 
 const domRoot = document.getElementById("cube-tower");
 
@@ -97,13 +96,7 @@ const animate = () => {
   requestAnimationFrame(animate);
   if (document.hidden) return;
 
-  // TODO use delta time, going to require updating all animation values unfortunately
-  // it's consistently around 0.007 on desktop
-  // const delta = clock.getDelta();
-  const now = performance.now();
-  const delta = (now - lastFrameTime) / 1000;
-  lastFrameTime = now;
-  console.log(delta);
+  const delta = clock.getDelta();
 
   const towerSpinSpeed = TOWER_SPIN_SPEED * delta;
   const towerDropSpeed = TOWER_DROP_SPEED * delta;
