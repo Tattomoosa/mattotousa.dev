@@ -1,6 +1,8 @@
 +++
 title="Genetic Algorithm: 8 Queens"
 weight=40
+[taxonomies]
+language=["Python"]
 +++
 
 This is a genetic algorithm that finds a winning solution to the "8 queens"

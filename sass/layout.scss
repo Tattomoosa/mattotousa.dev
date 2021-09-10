@@ -205,4 +205,12 @@ footer {
       right: 0;
     }
   }
+  @media screen and (min-height: 150vw) {
+    left: 15vw;
+    min-width: 85vw;
+  }
+}
+
+.body-text {
+  max-width: 680px;
 }

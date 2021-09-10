@@ -32,7 +32,9 @@ var currentPhase = 0;
 var towerNeedsToDrop = false;
 
 const scene = new THREE.Scene();
+
 const clock = new THREE.Clock();
+var lastFrameTime = performance.now();
 
 const domRoot = document.getElementById("cube-tower");
 
@@ -97,7 +99,11 @@ const animate = () => {
 
   // TODO use delta time, going to require updating all animation values unfortunately
   // it's consistently around 0.007 on desktop
-  const delta = clock.getDelta();
+  // const delta = clock.getDelta();
+  const now = performance.now();
+  const delta = (now - lastFrameTime) / 1000;
+  lastFrameTime = now;
+  console.log(delta);
 
   const towerSpinSpeed = TOWER_SPIN_SPEED * delta;
   const towerDropSpeed = TOWER_DROP_SPEED * delta;
