@@ -1,6 +1,8 @@
 @import "./layout.scss";
 @import "./blog.scss";
 @import "./project.scss";
+@import "./markdown.scss";
+@import "./homepage.scss";
 
 // reset
 * {
@@ -26,4 +28,8 @@ a {
   &:active {
     color: #ff69dc;
   }
+}
+
+.position-relative {
+  position: relative;
 }

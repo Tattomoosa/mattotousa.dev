@@ -28,6 +28,8 @@ const LINE_MATERIAL = new THREE.LineBasicMaterial({ color: LINE_COLOR });
 
 const PHASES = ["drop1", "drop2", "drop3", "drop4"];
 
+const FADE_SPEED = 0x010101;
+
 var currentPhase = 0;
 var towerNeedsToDrop = false;
 

@@ -28,10 +28,9 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     &.no-mobile-padding {
-        padding: 0;
+      padding: 0;
     }
   }
-
 }
 
 .nav-logo {
@@ -86,7 +85,6 @@ body {
   right: 0;
 }
 
-
 .nav-links {
   display: flex;
   list-style: none;
@@ -135,7 +133,7 @@ body {
   font-weight: normal;
   font-size: 80px;
   margin-top: 100px;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 550px) {
     font-size: 50px;
   }
 }

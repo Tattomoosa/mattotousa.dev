@@ -1,0 +1,125 @@
+@import "./_variables.scss";
+
+.markdown-content {
+  max-width: 800px;
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+    margin-top: 40px;
+    margin-bottom: 18px;
+  }
+  p {
+    margin: 18px 0 0;
+    font-size: 17px;
+  }
+  pre {
+    margin: 18px 0;
+    padding: 10px 10px;
+    @media screen and (max-width: 800px) {
+      margin-right: 10px;
+    }
+  }
+  ol,
+  ul {
+    margin-top: 24px;
+    padding-left: 40px;
+    margin-bottom: 36px;
+    font-size: 17px;
+  }
+  li {
+    margin: 4px 0;
+  }
+  code,
+  mark {
+    border-radius: 4px;
+    padding: 5px;
+  }
+  mark {
+    background: rgba(pink, 0.2);
+    color: inherit;
+  }
+  code,
+  pre {
+    font-family: monospace;
+    border-radius: 4px;
+  }
+  pre code {
+    background: transparent;
+    font-size: 16px;
+    padding: 0;
+  }
+  code {
+    background: rgba(black, 0.2);
+    font-size: 14px;
+  }
+  blockquote {
+    background: rgba(black, 0.2);
+    padding: 1px 20px 18px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-left: 5px solid $hover-link;
+    border-radius: 5px;
+  }
+  .footnote-definition {
+    display: inline;
+    p {
+      display: inline;
+    }
+  }
+  .footnote-reference {
+    padding: 0 5px;
+  }
+  table {
+    border-collapse: collapse;
+    width: calc(100% - 10px);
+    margin-top: 18px;
+    th {
+      background: rgba($hover-link, 0.35);
+      background: rgba(#2e3440, 0.35);
+    }
+    th,
+    td {
+      padding: 10px 20px;
+      border: 1px solid #334;
+    }
+    tr:nth-child(odd) td {
+      background: rgba(black, 0.1);
+    }
+    tr:nth-child(even) td {
+      background: rgba(black, 0.2);
+    }
+  }
+  // line numbers?
+  /*
+  pre span {
+    counter-increment: line;
+    &:before {
+      content: counter(line);
+      color: white;
+    }
+  }
+  */
+  img {
+    max-width: 100%;
+    margin: auto;
+  }
+  comment {
+    font-size: 12px;
+    color: rgba($dark-text-color, 0.4);
+    padding-right: 2px;
+  }
+}
