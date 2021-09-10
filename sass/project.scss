@@ -14,24 +14,27 @@ $project-page-break-to-mobile: 800px;
 
 .article-paper {
 	min-height: calc(100vh - #{$nav-height});
-	@media screen and (min-width: $project-page-break-to-mobile) {
-		min-height: calc(100vh - #{$spacer-height} - #{$nav-height})
-	}
 	@media screen and (min-width: 1200px) {
 		margin: 0 200px;
 	}
 	@media screen and (max-width: 1200px) {
 		margin: 0 100px;
 	}
+	@media screen and (max-width: $project-page-break-to-mobile) {
+		margin: 0;
+	}
+	@media screen and (min-width: $project-page-break-to-mobile) {
+		min-height: calc(100vh - #{$spacer-height} - #{$nav-height});
+	}
 }
 
 .article {
 	padding-top: 1px;
+	.title {
+		font-size: 48px;
+	}
 	@media screen and (min-width: $project-page-break-to-mobile) {
 		padding: 1px 60px;
-		.title {
-			font-size: 48px;
-		}
 	}
 }
 
