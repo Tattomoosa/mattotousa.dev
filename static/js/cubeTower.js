@@ -5,7 +5,7 @@ const LINE_COLOR = 0x777799;
 const CUBE_COLOR = LINE_COLOR;
 const TOWER_COLOR = LINE_COLOR;
 
-const GRAVITY = 0.06;
+const GRAVITY = 0.06 * 160;
 // TODO get from screen pixel to ensure offscreen
 
 const TOWER_SPIN_SPEED = 2.1;
@@ -140,7 +140,7 @@ const animate = () => {
 
   // update cube
   cube.rotation.y += cubeRotationSpeed;
-  cube.position.y -= cubeFallingSpeed;
+  cube.position.y -= cubeFallingSpeed * delta;
   cubeFallingSpeed += gravity;
 
   // cube has landed on tower

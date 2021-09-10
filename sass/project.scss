@@ -6,6 +6,7 @@ $thumbnail-width: 380px;
 $thumbnail-height: 280px;
 $thumbnail-mobile-switch: 1200px;
 $spacer-height: 30vh;
+$project-page-break-to-smaller-margin: 1200px;
 $project-page-break-to-mobile: 800px;
 
 .spacer {
@@ -14,27 +15,34 @@ $project-page-break-to-mobile: 800px;
 
 .article-paper {
 	min-height: calc(100vh - #{$nav-height});
-	@media screen and (min-width: 1200px) {
+	// medium
+	@media screen and (min-width: $project-page-break-to-smaller-margin) {
 		margin: 0 200px;
 	}
-	@media screen and (max-width: 1200px) {
+	// large
+	@media screen and (max-width: $project-page-break-to-smaller-margin) {
 		margin: 0 100px;
 	}
-	@media screen and (max-width: $project-page-break-to-mobile) {
-		margin: 0;
-	}
+	// smallish medium
 	@media screen and (min-width: $project-page-break-to-mobile) {
 		min-height: calc(100vh - #{$spacer-height} - #{$nav-height});
+	}
+	// small - breaking to mobile important
+	@media screen and (max-width: $project-page-break-to-mobile) {
+		margin: 0;
 	}
 }
 
 .article {
-	padding-top: 1px;
+	padding: 1px 10px;
 	.title {
-		font-size: 48px;
+		font-size: 24px;
 	}
 	@media screen and (min-width: $project-page-break-to-mobile) {
 		padding: 1px 60px;
+		.title {
+			font-size: 48px;
+		}
 	}
 }
 
