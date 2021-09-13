@@ -3,18 +3,23 @@ title="About Me"
 template="blog-page.html"
 +++
 
+![Standing in the Alvord Desert](me.jpg)
+
 ##### Chapter 1
 
 One day, I am told, I was born.
-I don't remember it very well though.
+I don't remember that very well though.
+Eventually I went to Ball State University for Audio Engineering
+and got a Bachelor's.
 
 ##### Chapter 2
 
-I got a bachelor's degree in Audio Engineering
-from Ball State University in Indiana.
 Then I moved to Chicago.
 I worked in live music for a while.
-I painted pet portraits on the side.
+Mostly it was weddings but I worked with a handful of big artists, most notably a series of rallies leading up to the Cubs 2016 world series victory.
+I also painted pet portraits on the side, like this one:
+
+![Portrait of Hunter](hunter_dog_portrait.png)
 
 ##### Chapter 3
 
@@ -27,8 +32,11 @@ I got a dog! His name is Atlas.
 I wanted to make myself a website for the pet portrait side hustle.
 On this site I wanted to provide a payment calculator so clients could
 determine the price of a given size of pet portrait.
+I learned some JavaScript.
 
 > "_It made me feel powerful_"
+
+![Mandelbrot set I coded in Rust](mandelbrot.png)
 
 It was all over for me.
 Soon, I would be working as a Front End Developer.
@@ -42,6 +50,8 @@ I met my partner. She also has a dog, named Ty.
 ##### Chapter 6
 
 We moved to Portland, Oregon.
+
+![Welcome to Oregon](welcome_to_oregon.png)
 I did contract work in web development for a while.
 I started making computer games and experimenting with other languages on the side.
 I liked working in web, but I had tasted the power of programming and I knew...
@@ -59,4 +69,6 @@ I learned some pretty neat stuff.
 
 ##### Chapter 8
 
-Tune in next time...
+Tune in next time to find out...
+
+![Scuba diving!](scuba.png)
