@@ -17,7 +17,15 @@
         {% for page in section.pages %}
         <li class="project-thumbnail">
             <a href="{{ page.permalink | safe }}">
-                <div class="project-name-text">{{ page.title }}</div>
+                <div class="project-name-text">
+                    {{ page.title }}
+                    <br/>
+                    {% if page.extra.lead %}
+                    <div class="lead">
+                        {{ page.extra.lead }}
+                    </div>
+                    {% endif %}
+                </div>
                 <img src="{{ page.permalink }}thumbnail.png" />
                 <div class="mask"></div>
             </a>

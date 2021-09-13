@@ -71,14 +71,14 @@ nav {
     }
     #nav-toggle.enabled {
       display: block;
-      top: 6px;
-      right: 6px;
+      top: 5px;
+      right: 4px;
       position: absolute;
       background: transparent;
       border: 1px solid $nav-line;
-      padding: 4px;
-      width: 36px;
-      height: 36px;
+      padding-left: 1px;
+      width: 44px;
+      height: 38px;
       color: $base-link;
       .las {
         font-size: 28px;

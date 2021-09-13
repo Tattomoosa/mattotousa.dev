@@ -4,7 +4,7 @@ weight = 15
 date = 2021-08-01
 start_date = 2021-06-01
 [taxonomies]
-languages=["C#", "Unity3d"]
+language=["C#", "Unity3d"]
 [extra]
 lead="Your favorite characters from the international smash hit Chess are back!"
 +++
