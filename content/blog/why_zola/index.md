@@ -61,7 +61,32 @@ set up _exactly_ the same way.
 
 ### Easy Internal Links
 
-### Anchors
+### Anchors (Like This One)
+
+If you're on desktop right now, you can see the table of contents on the left.
+This was marked up with minimal effort by the following code snippet, lifted
+from Zola's docs.
+
+```html
+{% if page.toc %}
+<ul class="toc">
+  {% for h1 in page.toc %}
+  <li>
+    <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+    {% if h1.children %}
+    <ul>
+      {% for h2 in h1.children %}
+      <li>
+        <a href="{{ h2.permalink | safe }}"> {{ h2.title }} </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif%}
+```
 
 ### Simple composable templates
 
@@ -75,7 +100,7 @@ I don't write much of the Python-style Sass language, but the more CSS-looking
 SCSS is fantastic. And SCSS just works in Zola, just include it in your html as
 CSS.
 
-## The Bad
+## The Not So Good
 
 ### No line numbers
 
@@ -116,7 +141,7 @@ this site, and I sort of considered it a challenge to keep it that way.
 
 If you see line numbers on any of the real code snippets above, you know I caved.
 
-### No Link to the Syntax Highlighting Theme List from the Syntax Highlighting Page in the Docs
+### One Frustrating Thing About The Docs
 
 Okay this one drove me a bit crazy. Zola supports _a ton_ of syntax highlighting
 themes simply from setting them in the config file. **That's great**.
@@ -143,20 +168,22 @@ All good solutions.
 
 ### The Name
 
-Zola is great aesthetically, I have no issues with it.
+Zola is great as a name aesthetically, I have no issues with it.
 Search the web for "zola" though.
 
 ![Static Site Generator and... Wedding Business??](./zola-search-results.png)
 
 Not exactly the Zola I wanted.
 Zola.com is some kind of wedding business.
-I don't know what they do exactly, but they have big internet presence.
+I don't know what they do exactly, but they have a big internet presence.
+Mild inconvenience at best.
 
-## Conclusion
+## The Point
 
 I like this site.
-I'm very happy with the process of developing it so far,
-and so I like Zola.
+I've been very happy with the process of developing it so far,
+and so I like Zola too.
 If you're building a new site, and it benefits from the good stuff above and
-isn't too bothered with the drawbacks I mentioned, check it out.
+you aren't too bothered by any of the drawbacks I mentioned, check it out.
+
 I don't think you'll regret it.

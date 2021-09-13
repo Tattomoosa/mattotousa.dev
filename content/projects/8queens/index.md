@@ -1,8 +1,12 @@
 +++
-title="Genetic Algorithm: 8 Queens"
+title="8 Queens"
+date="2021-02-21"
 weight=40
 [taxonomies]
 language=["Python"]
+[extra]
+lead="A solution using a genetic algorithm"
+githublink="https://github.com/Tattomoosa/8-queens"
 +++
 
 This is a genetic algorithm that finds a winning solution to the "8 queens"

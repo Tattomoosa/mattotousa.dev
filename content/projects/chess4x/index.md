@@ -4,15 +4,16 @@ weight = 15
 date = 2021-08-01
 start_date = 2021-06-01
 [taxonomies]
+languages=["C#", "Unity3d"]
+[extra]
+lead="Your favorite characters from the international smash hit Chess are back!"
 +++
-
-_Your favorite characters from the international smash hit Chess are back!_
 
 The idea here is that it's a take on Chess with inspiration from 4X games.
 I had a couple ideas that were fun to explore, but it's been sitting unfinished for a while now.
 
-The gist of it was that every turn your king makes one pawn, and by 
-arranging those pawns into the shapes another piece moves by you can 
+The gist of it was that every turn your king makes one pawn, and by
+arranging those pawns into the shapes another piece moves by you can
 transform those pawns into a knight, bishop, or rook.
 
 It's simpler than it sounds, hopefully a little easier to grok with pictures.

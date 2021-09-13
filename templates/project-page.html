@@ -1,25 +1,55 @@
 {% extends "base.html" %}
 
 {% block content %}
-<img src="header.png" class="background-image" />
+<img src="thumbnail.png" class="background-image" />
 
 <div class="spacer"></div>
 <div class="container no-mobile-padding">
     <div class="article-paper bg-color">
 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
         <div class="article">
             <h1 class="title">
                 {{ page.title }}
             </h1>
-            <p class="subtitle">
-                {{ page.date }}
-            </p>
+            <br/>
+            {% if page.extra.lead %}
+            <h2 class="lead">
+                {{ page.extra.lead }}
+            </h2>
+            {% endif %}
+            <br/>
+            <div>
+                <span class="date">
+                    {{ page.date }}
+                </span>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <!-- Languages -->
+                {% if page.taxonomies.language %}
+                {% for lang in page.taxonomies.language %}
+                <span class="language-tag">{{ lang }}</span>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <br/>
+            <br/>
+            <br/>
             <div class="body-text markdown-content">
                 {{ page.content | safe }}
             </div>
         </div>
+        <div style="height: 200px"></div>
+
 
     </div>
+    <div style="height: 50px"></div>
 </div>
 
 {% endblock content %}

@@ -96,12 +96,6 @@ hr.blog-summary-separator {
     margin: 0;
     // text-align: right;
   }
-  .date {
-    // text-align: right;
-    color: grey;
-    font-weight: normal;
-    font-size: 14px;
-  }
   // desktop
   @media screen and (min-width: $blog-break-to-mobile) {
     position: fixed;
@@ -157,5 +151,33 @@ hr.blog-summary-separator {
   @media screen and (max-width: $blog-break-to-mobile) {
     max-width: 800px;
     padding: $mobile-content-padding;
+  }
+}
+
+.toc {
+  @media screen and (max-width: $blog-break-to-mobile) {
+    display: none;
+  }
+  list-style-type: none;
+  a {
+    text-decoration: none;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+  // "h1" li
+  li {
+    text-transform: uppercase;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  ul {
+    list-style-type: none;
+    // "h2" li
+    li {
+      font-size: 12px;
+      text-transform: initial;
+      margin-top: 1px;
+    }
   }
 }

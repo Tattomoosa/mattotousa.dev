@@ -31,7 +31,7 @@
                 <li class="nav-link-item">
                     <a
                         href="/blog"
-                        class="nav-link-text {% if current_path is starting_with('/blog')%} nav-link-active {% endif %}"
+                        class="nav-link-text {% if current_path and current_path is starting_with('/blog')%} nav-link-active {% endif %}"
                     >
                         Blog
                     </a>
@@ -39,7 +39,7 @@
                 <li class="nav-link-item">
                     <a
                         href="/projects"
-                        class="nav-link-text {% if current_path is starting_with('/projects')%} nav-link-active {% endif %}"
+                        class="nav-link-text {% if current_path and current_path is starting_with('/projects')%} nav-link-active {% endif %}"
                     >
                         Projects
                     </a>

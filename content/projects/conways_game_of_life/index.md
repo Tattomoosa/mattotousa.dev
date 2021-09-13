@@ -1,6 +1,10 @@
 +++
 title="Conway's Game of Life"
 weight=30
+[taxonomies]
+language=["React", "JavaScript"]
+[extra]
+lead="React implementation of the classic"
 +++
 
 An implementation of
