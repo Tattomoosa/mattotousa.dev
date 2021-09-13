@@ -60,8 +60,15 @@ nav {
     height: 100%;
   }
 
+  .mobile-only {
+    display: none;
+  }
+
   // mobile
   @media screen and (max-width: $break-to-mobile) {
+    .mobile-only {
+      display: block;
+    }
     #nav-toggle.enabled {
       display: block;
       top: 6px;
@@ -73,6 +80,9 @@ nav {
       width: 36px;
       height: 36px;
       color: $base-link;
+      .las {
+        font-size: 28px;
+      }
     }
 
     #header-nav-links {
