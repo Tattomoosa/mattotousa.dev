@@ -92,46 +92,8 @@ body {
   right: 0;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  height: $nav-height;
-}
-
 .flex-spacer {
   flex-grow: 1;
-}
-
-.nav-link-item {
-  margin: 0 10px;
-  height: 100%;
-}
-
-.nav-link-text {
-  display: inline-block;
-  color: $text-color;
-  text-decoration: none;
-  line-height: $nav-height;
-  transition-property: transform, color;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-out;
-  &:visited {
-    color: $text-color;
-  }
-  &:hover {
-    color: $hover-link;
-    transform: scale3d(1.1, 1.1, 1);
-  }
-  &:active {
-    color: $active-link;
-    transition-duration: 0.1s;
-    transform: scale3d(1.2, 1.2, 1) rotate(5deg);
-  }
-  &.nav-link-active {
-    color: $active-link;
-  }
 }
 
 .title {

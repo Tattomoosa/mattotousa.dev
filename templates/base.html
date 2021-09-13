@@ -17,7 +17,7 @@
     </script>
 
     <!-- Nav Bar -->
-    <nav class="nav-bar">
+    <header class="nav-bar">
         <div class="container flex">
 
             <a href="/" class="nav-logo">
@@ -27,27 +27,60 @@
 
             <div class="flex-spacer"></div>
 
-            <ul class="nav-links">
-                <li class="nav-link-item">
-                    <a
-                        href="/blog"
-                        class="nav-link-text {% if current_path and current_path is starting_with('/blog')%} nav-link-active {% endif %}"
-                    >
-                        Blog
-                    </a>
-                </li>
-                <li class="nav-link-item">
-                    <a
-                        href="/projects"
-                        class="nav-link-text {% if current_path and current_path is starting_with('/projects')%} nav-link-active {% endif %}"
-                    >
-                        Projects
-                    </a>
-                </li>
-            </ul>
+            <!-- Accessible navigation based on https://www.a11ymatters.com/pattern/mobile-nav -->
+            <nav role="navigation">
+
+                <ul id="header-nav-links" class="nav-links is-active">
+                    <li class="nav-link-item">
+                        <a
+                            href="/blog"
+                            class="nav-link-text {% if current_path and current_path is starting_with('/blog')%} nav-link-active {% endif %}"
+                        >
+                            <span>
+                                Blog
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a
+                            href="/projects"
+                            class="nav-link-text {% if current_path and current_path is starting_with('/projects')%} nav-link-active {% endif %}"
+                        >
+                            Projects
+                        </a>
+                    </li>
+                </ul>
+                <button id="nav-toggle">
+                    <i id="nav-icon"></i>
+                    <span>Menu</span>
+                </button>
+
+                <script>
+                    // only have toggle button if javascript is enabled --
+                    // otherwise, nav will be shown anyway
+                    const navBtn = document.querySelector("#nav-toggle");
+                    navBtn.classList.add("enabled");
+
+                    // draw icon
+                    const navIcon = document.querySelector("#nav-icon");
+                    navIcon.classList.add("las", "la-bars");
+                    // make button work
+                    navBtn.addEventListener("click", () => {
+                        const isActive = navLinks.classList.toggle("is-active")
+                        if (isActive)
+                            navIcon.className = "las la-times"
+                        else
+                            navIcon.className = "las la-bars"
+                    });
+
+                    // if javascript is enabled, hide navLinks by default
+                    const navLinks = document.querySelector("#header-nav-links");
+                    navLinks.classList.remove("is-active");
+                </script>
+            </nav>
 
         </div>
-    </nav>
+    </header>
 
     <div class="fill-page">
 
