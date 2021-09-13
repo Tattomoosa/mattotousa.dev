@@ -5,6 +5,8 @@ date = 2018-05-05
 start_date = 2018-04-07
 [taxonomies]
 language=["JavaScript"]
+[extra]
+lead="The spreadsheet of mortality"
 +++
 
 Inspired by the blog [Wait but Why](https://waitbutwhy.com/),

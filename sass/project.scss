@@ -67,7 +67,8 @@ $project-page-break-to-mobile: 800px;
   transition-timing-function: ease-out;
 
   .lead {
-    color: #f0f0f0;
+    // color: #f0f0f0;
+    color: $text-color;
     opacity: 1;
     font-size: 14px;
   }

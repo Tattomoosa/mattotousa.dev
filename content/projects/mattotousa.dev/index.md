@@ -1,6 +1,10 @@
 +++
 title="mattotousa.dev"
 weight=20
+[taxonomies]
+language=["Tera", "Zola", "JavaScript"]
+[extra]
+lead="It's on your screen right now"
 +++
 
 Inception! That's this site!
@@ -12,5 +16,5 @@ I decided the time for all that was over.
 I'm using the fantastic [Zola Static Site Generator](https://www.getzola.org/).
 It uses the Tera templating engine for templates.
 
-Both Zola and Tera are pure Rust, and damn they are *fast*.
+Both Zola and Tera are pure Rust, and damn they are _fast_.
 Zola generates this entire site in milliseconds.

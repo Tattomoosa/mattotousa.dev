@@ -1,6 +1,10 @@
 +++
-title="Improved Collider Editor (Unity3D)"
+title="Improved Collider Editor"
 weight=21
+[taxonomies]
+language=["Unity3d", "C#"]
+[extra]
+lead="Unity collider editing, but better"
 +++
 
 This is a [Unity3D](https://unity3d.com) asset that makes editing Unity's

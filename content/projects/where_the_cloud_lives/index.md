@@ -3,6 +3,10 @@ title = "Where the Cloud Lives"
 weight = 12
 date = 2020-10-05
 start_date = 2020-10-03
+[taxonomies]
+language=["C#", "Unity"]
+[extra]
+lead="(What the cloud knows)"
 +++
 
-This is a game my friend Scott Patterson and I made for the 2020 October Ludum Dare.
+My first entry into Ludum Dare, the bi-annual gamejam.

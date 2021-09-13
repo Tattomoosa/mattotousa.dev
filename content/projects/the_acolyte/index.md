@@ -6,7 +6,7 @@ start_date = 2020-04-22
 [taxonomies]
 language=["godot", "gdscript"]
 [extra]
-lead="Serve Your Purpose. Betray Your Brothers."
+lead="Serve your purpose. Betray your brothers."
 +++
 
 [Check out a no-commentary playthrough on my YouTube channel](https://www.youtube.com/watch?v=dHNv9RmldeQ)

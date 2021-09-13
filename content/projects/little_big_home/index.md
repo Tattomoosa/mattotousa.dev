@@ -6,5 +6,5 @@ start_date = 2021-06-01
 [taxonomies]
 language=["C#", "Unity"]
 [extra]
-lead="A Surreal Platformer"
+lead="A surreal platformer"
 +++

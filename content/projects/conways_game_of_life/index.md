@@ -4,7 +4,7 @@ weight=30
 [taxonomies]
 language=["React", "JavaScript"]
 [extra]
-lead="React implementation of the classic"
+lead="The OG cellular automata, now in React"
 +++
 
 An implementation of
