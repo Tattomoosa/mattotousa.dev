@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+
 .main-title {
   text-align: right;
   position: absolute;
@@ -12,5 +14,37 @@
   }
   .subtitle {
     margin-right: 5px;
+  }
+}
+
+.cube-tower-container {
+  position: relative;
+  top: 0;
+  height: calc(100vh - #{$nav-height});
+  width: 100vw;
+  border-bottom: 1px solid $nav-line;
+  @media screen and (max-width: 313px) {
+    left: 0;
+  }
+}
+
+#cube-tower {
+  width: 600px;
+  position: absolute;
+  left: 50vw;
+  @media screen and (max-width: 1200px) {
+    width: auto;
+    @media screen and (max-width: 800px) {
+      left: 20vw;
+      right: 0;
+    }
+  }
+  @media screen and (min-height: 150vw) {
+    left: 15vw;
+    min-width: 85vw;
+  }
+  @media screen and (max-width: 313px) {
+    left: 10px;
+    width: 90vw;
   }
 }

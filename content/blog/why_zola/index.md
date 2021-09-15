@@ -18,7 +18,7 @@ so far has been great.
 
 Zola has a pretty unassuming website:
 
-![Zola's website](./zola-site.png)
+![Zola's website](zola-site.png)
 
 No logo, no fancy front end stuff, just a solid site with the stuff you need in
 (mostly) easy to find places. (More on that later)
@@ -121,7 +121,7 @@ pre span {
 
 But, to my abject _horror_, it came out looking like this instead:
 
-![Oh the humanity](./messed-up-line-numbers.png)
+![Oh the humanity](messed-up-line-numbers.png)
 
 It turns out the codeblocks are styled with `<span>`s corresponding to syntax tokens, but
 there is no semantic markup for line breaks.
@@ -138,6 +138,8 @@ and sending it completely formed.
 
 At the time of this writing, the [ThreeJS](https://threejs.org/) homepage is the _only_ JavaScript on
 this site, and I sort of considered it a challenge to keep it that way.
+
+> Busted -- The mobile nav has a little bit of JavaScript, progressively enhanced.
 
 If you see line numbers on any of the real code snippets above, you know I caved.
 

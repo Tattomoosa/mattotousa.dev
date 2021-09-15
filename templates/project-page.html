@@ -25,12 +25,14 @@
             {% endif %}
             <br/>
             <div>
+                {% if page.date %}
                 <span class="date">
                     {{ page.date }}
                 </span>
                 &nbsp;
                 &nbsp;
                 &nbsp;
+                {% endif %}
                 <!-- Languages -->
                 {% if page.taxonomies.language %}
                 {% for lang in page.taxonomies.language %}
@@ -38,11 +40,20 @@
                 {% endfor %}
                 {% endif %}
             </div>
+
             <br/>
             <br/>
             <br/>
+
             <div class="body-text markdown-content">
+                {% if page.content %}
                 {{ page.content | safe }}
+                {% else %}
+                Oops!
+                <br/>
+                <br/>
+                I haven't gotten around to writing a description for this project yet.
+                {% endif %}
             </div>
         </div>
         <div style="height: 200px"></div>

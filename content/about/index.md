@@ -54,7 +54,7 @@ We moved to Portland, Oregon.
 ![Welcome to Oregon](welcome_to_oregon.png)
 I did contract work in web development for a while.
 I started making computer games and experimenting with other languages on the side.
-I liked working in web, but I had tasted the power of programming and I knew...
+I liked working in web, but I had tasted the power of programming and I knew that
 
 > "_I had to go deeper_"
 
@@ -62,13 +62,16 @@ I liked working in web, but I had tasted the power of programming and I knew...
 
 So I got a Master's degree from Portland State University in Computer Science.
 I worked on some research,
-building tools for Earthquakes
-and cutting-edge Server Security.
-I took some classes.
-I learned some pretty neat stuff.
+building tools to help Civil Engineers study Earthquakes
+and on cutting-edge Server Security.
+I took some classes too, and learned some pretty neat stuff.
 
 ##### Chapter 8
 
 Tune in next time to find out...
 
 ![Scuba diving!](scuba.png)
+
+<div style="text-align: right; margin-right: 20px">
+  Bye!
+</div>

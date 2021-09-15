@@ -17,6 +17,13 @@
         {% for page in section.pages %}
         <li class="project-thumbnail">
             <a href="{{ page.permalink | safe }}">
+                {% if page.taxonomies %}
+                <div class="language-tagbar">
+                {% for lang in page.taxonomies.language %}
+                    <span class="language-tag">{{ lang }}</span>
+                {% endfor %}
+                </div>
+                {% endif %}
                 <div class="project-name-text">
                     {{ page.title }}
                     <br/>
@@ -32,5 +39,9 @@
         </li>
         {% endfor %}
     </ul>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 </div>
 {% endblock content %}

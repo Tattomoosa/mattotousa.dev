@@ -6,7 +6,7 @@ start_date = 2021-06-01
 [taxonomies]
 language=["React", "TypeScript", "Python"]
 [extra]
-lead="Real-time visualization of vehicle emissions"
+lead="Your city's vehicle emissions in real time"
 +++
 
 ISMYROADFRESH shows you (an estimation of) the current level of emissions

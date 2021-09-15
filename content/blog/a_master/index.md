@@ -1,6 +1,7 @@
 +++
 title = "A Master?"
 date = 2021-09-10
+draft=true
 +++
 
 So I just got a Master's degree last week.

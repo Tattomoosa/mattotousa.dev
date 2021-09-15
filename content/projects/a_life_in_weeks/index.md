@@ -19,6 +19,6 @@ This was one of my first-ever completed web projects, and I'm pleasantly surpris
 There are of course things I would do differently now (e.g. the styling is a bit much)
 but overall it more or less holds up.
 
-TODO: Link to actual post, fix link on page with link to actual post.
+[Read the article](https://waitbutwhy.com/2014/05/life-weeks.html)
 
 [Check it out](http://tattomoosa.github.io/a-life-in-weeks/)

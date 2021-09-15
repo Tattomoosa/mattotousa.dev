@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "markdownlint.config": {
+      // Allow HTML in markdown
+      "MD033": false
+    }
+  }
+}

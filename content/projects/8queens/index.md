@@ -22,3 +22,7 @@ but it was one of the higher performing implementations from the class.
 ![Graph of a run with success at iteration 29, with population size 100 and 10% mutation chance](./great_success.png)
 
 ![Graph of a run with success at iteration 57, with population size 100 and 20% mutation chance](./good_success.png)
+
+It was definitely an interesting project.
+The code was straightforward but I was surprised how long it took to find good
+values for the various modifiable parameters.

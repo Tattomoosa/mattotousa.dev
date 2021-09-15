@@ -2,6 +2,12 @@
 
 .markdown-content {
   max-width: 800px;
+
+  @media screen and (max-width: 800px) {
+    margin-right: 20px;
+  }
+
+  // headings
   h1 {
     font-size: 64px;
   }
@@ -21,10 +27,12 @@
     margin-top: 60px;
     margin-bottom: 18px;
   }
+
   p {
     margin: 18px 0 0;
     font-size: 17px;
   }
+
   pre {
     overflow-x: auto;
     margin: 18px 0;
@@ -34,6 +42,7 @@
       margin-left: 10px;
     }
   }
+
   ol,
   ul {
     margin-top: 24px;
@@ -41,32 +50,39 @@
     margin-bottom: 36px;
     font-size: 17px;
   }
+
   li {
     margin: 4px 0;
   }
+
   code,
   mark {
     border-radius: 4px;
     padding: 5px;
   }
+
   mark {
     background: rgba(pink, 0.2);
     color: inherit;
   }
+
   code,
   pre {
     font-family: monospace;
     border-radius: 4px;
   }
+
   pre code {
     background: transparent;
     font-size: 16px;
     padding: 0;
   }
+
   code {
     background: rgba(black, 0.2);
     font-size: 14px;
   }
+
   blockquote {
     background: rgba(black, 0.2);
     padding: 1px 20px 18px;
@@ -76,31 +92,41 @@
     border-left: 5px solid $hover-link;
     border-radius: 5px;
   }
+
   .footnote-definition {
     display: inline;
     p {
       display: inline;
     }
   }
+
   .footnote-reference {
     padding: 0 5px;
   }
+
   table {
     border-collapse: collapse;
     width: calc(100% - 10px);
     margin-top: 18px;
+
+    // heading background
     th {
       background: rgba($hover-link, 0.35);
       background: rgba(#2e3440, 0.35);
     }
+
+    // cell styles
     th,
     td {
       padding: 10px 20px;
       border: 1px solid #334;
     }
+
+    // alternating table row colors
     tr:nth-child(odd) td {
       background: rgba(black, 0.1);
     }
+
     tr:nth-child(even) td {
       background: rgba(black, 0.2);
     }
@@ -112,7 +138,7 @@
     margin-top: 60px;
     margin-bottom: 60px;
     max-width: 100%;
-    max-height: 50vh;
+    max-height: 400px;
   }
 
   comment {

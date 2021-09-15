@@ -7,6 +7,8 @@ language=["Unity3d", "C#"]
 lead="Unity collider editing, but better"
 +++
 
+![Overview of features](features.png)
+
 This is a [Unity3D](https://unity3d.com) asset that makes editing Unity's
 built-in colliders easier.
 I built it because I got really annoyed that you can control a

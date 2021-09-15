@@ -18,3 +18,5 @@ It uses the Tera templating engine for templates.
 
 Both Zola and Tera are pure Rust, and damn they are _fast_.
 Zola generates this entire site in milliseconds _I love it_.
+
+[Read the whole blog post I wrote about Zola](/blog/why-zola)

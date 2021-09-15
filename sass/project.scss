@@ -105,25 +105,44 @@ $project-page-break-to-mobile: 800px;
     bottom: 0;
   }
 
-  &:hover {
-    .mask {
-      box-shadow: 0 0 40px 2px inset rgba(white, 0.3);
-    }
-    img {
-      transition-duration: $hover-transition-time;
-      transform: scale3d(1.2, 1.2, 1);
+  .language-tagbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(rgba(black, 0.6), transparent);
+    .language-tag {
+      background: $bg-color;
+      font-size: 11px;
+      margin: 2px 2px 3px;
+      border: 1px solid $nav-line;
     }
   }
 
   // desktop
   @media screen and (min-width: $thumbnail-mobile-switch) {
     margin-bottom: 24px;
-    border-radius: 10px;
+    border-radius: 4px;
     border: 2px solid rgba(white, 0.2);
 
     .mask {
       transition-duration: $hover-transition-time;
       background: rgba(black, 0.6);
+    }
+
+    .language-tagbar {
+      top: -100px;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      .language-tag {
+        opacity: 0;
+      }
     }
 
     &:hover {
@@ -146,6 +165,23 @@ $project-page-break-to-mobile: 800px;
 
       .mask {
         background: transparent;
+        box-shadow: 0 0 40px 2px inset rgba(white, 0.3);
+      }
+
+      img {
+        transition-duration: $hover-transition-time;
+        transform: scale3d(1.2, 1.2, 1);
+      }
+
+      .language-tagbar {
+        top: 0;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        transition-delay: 0.25s;
+        .language-tag {
+          color: $text-color;
+          opacity: 1;
+        }
       }
     }
   }
@@ -173,6 +209,7 @@ $project-page-break-to-mobile: 800px;
       }
     }
 
+    /*
     &:hover {
       .mask {
         transition-duration: $hover-transition-time;
@@ -186,5 +223,6 @@ $project-page-break-to-mobile: 800px;
         padding-left: 80px;
       }
     }
+    */
   }
 }
