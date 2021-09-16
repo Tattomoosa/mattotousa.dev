@@ -33,7 +33,7 @@
                     </div>
                     {% endif %}
                 </div>
-                {% set image_path = '@' ~ page.path ~ 'thumbnail.png' %}
+                {% set image_path = page.path ~ 'thumbnail.png' %}
                 {% set image = resize_image(path=image_path, width=500, op='fit_width') %}
                 <img src="{{ image.url }}" />
                 <div class="mask"></div>

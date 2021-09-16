@@ -10,7 +10,7 @@
         {% for page in section.pages %}
         <li>
             <a class="blog-summary" href="{{ page.permalink | safe }}">
-                {% set image_path = '@' ~ page.path ~ 'thumbnail.png' %}
+                {% set image_path = page.path ~ 'thumbnail.png' %}
                 {% set image = resize_image(path=image_path, width=300, op='fit_width') %}
                 <span>
                     <img src="{{ image.url }}" />
