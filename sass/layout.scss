@@ -152,7 +152,8 @@ footer {
   height: $footer-height;
   position: absolute;
   bottom: 0;
-  // bottom: -3px;
+  left: 0;
+  right: 0;
   width: 100%;
   border-top: 1px solid $nav-line;
   padding-top: 2px;

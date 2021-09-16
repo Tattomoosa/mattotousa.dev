@@ -86,6 +86,19 @@ $blog-break-to-mobile: 1000px;
       transition: 0.4s;
     }
   }
+
+  img {
+    object-fit: cover;
+    transition-property: transform;
+    max-width: 350px;
+    height: 270px;
+    margin-bottom: -14px;
+    padding-right: 10px;
+    padding-left: 5px;
+    @media screen and (max-width: 1250px) {
+      display: none;
+    }
+  }
 }
 
 hr.blog-summary-separator {
