@@ -7,7 +7,7 @@ jobs:
       - name: 'checkout'
         uses: actions/checkout@v2
       - name: 'build'
-        uses: shalzz/zola-deploy-action@v0.14.0
+        uses: shalzz/zola-deploy-action@v0.14.1
         env:
           PAGES_BRANCH: gh-pages
           BUILD_DIR: .
