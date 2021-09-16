@@ -38,6 +38,7 @@ const scene = new THREE.Scene();
 const clock = new THREE.Clock();
 
 const domRoot = document.getElementById("cube-tower");
+domRoot.innerHTML = "";
 
 const root = new THREE.Group();
 root.rotation.y = -0.3;

@@ -89,18 +89,20 @@ nav {
       display: none;
     }
 
-    #header-nav-links.is-active {
-      display: block;
-      position: absolute;
-      top: $nav-height;
-      right: 0;
-      width: 100%;
-      height: auto;
-      .nav-link-item {
-        background: $bg-color;
-        border-bottom: 1px solid $nav-line;
+    #header-nav-links {
+      &.is-active {
+        display: block;
+        position: absolute;
+        top: $nav-height;
+        right: 0;
+        width: 100%;
+        height: auto;
+        .nav-link-item {
+          background: $bg-color;
+          border-bottom: 1px solid $nav-line;
+        }
+        box-shadow: 0 10px 10px rgba(black, 0.2);
       }
-      box-shadow: 0 10px 10px rgba(black, 0.2);
     }
 
     .nav-link-item {
