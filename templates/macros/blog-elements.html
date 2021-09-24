@@ -1,0 +1,22 @@
+
+{% macro blog_summary(page) %}
+<li>
+	<a class="blog-summary" href="{{ page.permalink | safe }}">
+		{% set image_path = page.path ~ 'thumbnail.png' %}
+		{% set image = resize_image(path=image_path, width=300, op='fit_width') %}
+		<span>
+			<img src="{{ image.url }}" />
+		</span>
+		<div style="display: inline-block;">
+			<h6 class="date">{{ page.date }}</h6>
+			<h1>{{ page.title }}</h1>
+			<div class="markdown-content">
+				{{ page.summary | safe }}
+			</div>
+			<input type="button" value="Read More ({{page.reading_time}} minutes)"/>
+		</div>
+	</a>
+	{#<hr class="blog-summary-separator" />#}
+</li>
+
+{% endmacro %}

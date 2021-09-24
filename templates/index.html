@@ -1,6 +1,11 @@
 {% extends "base.html" %}
+{% import "macros/project-macros.html" as project_elements %}
+{% import "macros/blog-elements.html" as blog_elements %}
 
 {% block content %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="js/cubeTower.js" defer></script>
 
 <div class="container position-relative">
     <div class="main-title">
@@ -14,13 +19,44 @@
     <div id="cube-tower" class="fill-parent">
         <img class="fallback-img" src="no-js-fallback-cubetower.png"/>
     </div>
+    <div class="cube-tower-fade-out-bottom"></div>
 </div>
 
-<div class="section">
-    <!-- project thumbnails -->
+<div class="container no-mobile-padding">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <section>
+        <h1 class="section-title" style="text-align: center">Recent Projects</h1>
+        <ul class="project-thumbnail-list">
+            {{ project_elements::project_thumbnail(page=get_page(path="projects/csz-at-pdx/index.md")) }}
+            {{ project_elements::project_thumbnail(page=get_page(path="projects/epa-rimm/index.md")) }}
+            {{ project_elements::project_thumbnail(page=get_page(path="projects/ismyroadfresh/index.md")) }}
+        </ul>
+        <div class="align-right">
+            <a class="nav-link-text more-link" href="/projects">See More <i class="las la-arrow-right"></i></a>
+        </div>
+    </section>
+    <section>
+        <h1 class="section-title" style="text-align: center">Recent Blog Posts</h1>
+        <ul class="blog-list">
+            {{ blog_elements::blog_summary(page=get_page(path="blog/why-zola/index.md")) }}
+        </ul>
+        <div class="align-right">
+            <a class="nav-link-text more-link" href="/blog">See More <i class="las la-arrow-right"></i></a>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="js/cubeTower.js"></script>
 
 {% endblock content %}

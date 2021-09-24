@@ -21,22 +21,32 @@
   overflow: hidden;
   position: relative;
   top: 0;
-  height: calc(100vh - #{$nav-height});
+  height: calc(100vh - #{$nav-height} + 50px);
   width: 100vw;
-  border-bottom: 1px solid $nav-line;
+  // border-bottom: 1px solid $nav-line;
   @media screen and (max-width: 313px) {
     left: 0;
   }
 }
 
+.cube-tower-fade-out-bottom {
+  z-index: 1000;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  box-shadow: inset 0 -100px 100px -50px $bg-color;
+}
+
 .fallback-img {
-  min-height: calc(100vh - #{$nav-height});
+  min-height: calc(100vh - #{$nav-height} + 50px);
 }
 
 #cube-tower {
   width: 600px;
   position: absolute;
   left: 50vw;
+
   @media screen and (max-width: 1200px) {
     width: auto;
     @media screen and (max-width: 800px) {
@@ -44,10 +54,12 @@
       right: 0;
     }
   }
+
   @media screen and (min-height: 150vw) {
     left: 15vw;
     min-width: 85vw;
   }
+
   @media screen and (max-width: 313px) {
     left: 10px;
     width: 90vw;

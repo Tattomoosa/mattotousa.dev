@@ -1,3 +1,5 @@
+{% import "macros/layout-elements.html" as layout %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,156 +8,21 @@
     <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matt O'Tousa | Software Engineer</title>
     <meta name="description" content="Matt O'Tousa is a software engineer living in Portland, OR.">
-    <link rel="stylesheet" href={{ get_url(path="index.css" ) }} />
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href={{ get_url(path="index.css" ) }}>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
 </head>
 
-<body>
-    <script>
-        /*
-        console.log("Tera context:", `{{ __tera_context }}`);
-        */
-    </script>
+<body class="no-js">
+    <!-- this makes adjusting css possible if js is present -->
+    <script>document.body.classList.remove('no-js');</script>
 
-    <!-- Nav Bar -->
-    <header class="nav-bar">
-        <div class="container flex">
-
-            <a href="/" class="nav-logo">
-                Matt O'Tousa
-                <div class="nav-logo-subscript">Software Engineer</div>
-            </a>
-
-            <div class="flex-spacer"></div>
-
-            <!-- Accessible navigation based on https://www.a11ymatters.com/pattern/mobile-nav -->
-            <nav role="navigation">
-
-                <ul id="header-nav-links" class="nav-links is-active">
-                    <li class="nav-link-item mobile-only">
-                        <a
-                            href="/"
-                            class="nav-link-text {% if current_path and current_path is matching('^/$') %} nav-link-active {% endif %}"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-link-item">
-                        <a
-                            href="/blog"
-                            class="nav-link-text {% if current_path and current_path is starting_with('/blog')%} nav-link-active {% endif %}"
-                        >
-                            Blog
-                        </a>
-                    </li>
-                    <li class="nav-link-item">
-                        <a
-                            href="/projects"
-                            class="nav-link-text {% if current_path and current_path is starting_with('/projects')%} nav-link-active {% endif %}"
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li class="nav-link-item">
-                        <a
-                            href="/about"
-                            class="nav-link-text {% if current_path and current_path is starting_with('/about')%} nav-link-active {% endif %}"
-                        >
-                            About
-                        </a>
-                    </li>
-                </ul>
-                <button id="nav-toggle" aria-expanded="false" aria-controls="header-nav-links">
-                    <i id="nav-icon"></i>
-                    <span>Menu</span>
-                </button>
-
-                <script>
-                    // only have toggle button if javascript is enabled --
-                    // otherwise, nav will be shown anyway
-                    const navToggle = document.querySelector("#nav-toggle");
-                    navToggle.classList.add("enabled");
-
-                    // draw icon
-                    const navIcon = document.querySelector("#nav-icon");
-                    navIcon.classList.add("las", "la-bars");
-                    // make button work
-                    navToggle.addEventListener("click", () => {
-                        const isActive = navLinks.classList.toggle("is-active")
-                        if (isActive) {
-                            navIcon.className = "las la-times"
-                            navToggle.setAttribute('aria-expanded', 'true');
-                        } else {
-                            navIcon.className = "las la-bars"
-                            navToggle.setAttribute('aria-expanded', 'false');
-                        }
-                    });
-
-                    // if javascript is enabled, hide navLinks by default
-                    const navLinks = document.querySelector("#header-nav-links");
-                    navLinks.classList.remove("is-active");
-                </script>
-            </nav>
-
-        </div>
-    </header>
+    {{ layout::header() }}
 
     <div class="fill-page">
-
         <!-- Per-page content -->
         {% block content %} {% endblock %}
 
-        <footer>
-            <div class="container">
-                <div class="flex">
-                <div class="made-with">
-                    Made with <a href="https://www.getzola.org/">Zola</a>
-                </div>
-                <div class="flex-spacer"></div>
-                <ul class="nav-links">
-                    <li>
-                        <a class="icon-link nav-link-text">
-                            <i class="lab la-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link nav-link-text" href="https://github.com/Tattomoosa">
-                            <i class="lab la-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link nav-link-text" href="https://codepen.io/Tattomoosa">
-                            <i class="lab la-codepen"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link nav-link-text">
-                            <i class="lab la-stack-overflow"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link nav-link-text">
-                            <i class="lab la-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link nav-link-text">
-                            <i class="lab la-youtube"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link nav-link-text">
-                            <i class="las la-envelope"></i>
-                        </a>
-                    </li>
-                </ul>
-
-                </div>
-            </div>
-        </footer>
-
+        {{ layout::footer() }}
     </div>
-
 </body>
-
 </html>

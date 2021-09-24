@@ -4,7 +4,9 @@
 // $thumbnail-height: 160px;
 $thumbnail-width: 380px;
 $thumbnail-height: 280px;
-$thumbnail-mobile-switch: 1200px;
+$smaller-thumbnail-width: 30%;
+$thumbnail-mobile-switch: 800px;
+$thumbnail-shrink-switch: 1200px;
 $spacer-height: 30vh;
 $project-page-break-to-smaller-margin: 1200px;
 $project-page-break-to-mobile: 800px;
@@ -183,6 +185,10 @@ $project-page-break-to-mobile: 800px;
           opacity: 1;
         }
       }
+    }
+
+    @media screen and (max-width: $thumbnail-shrink-switch) {
+      width: $smaller-thumbnail-width;
     }
   }
 

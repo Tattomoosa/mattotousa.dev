@@ -1,3 +1,5 @@
+
+{% macro project_thumbnail(page) %}
 <li class="project-thumbnail">
 	<a href="{{ page.permalink | safe }}">
 		{% if page.taxonomies %}
@@ -17,8 +19,9 @@
 			{% endif %}
 		</div>
 		{% set image_path = page.path ~ 'thumbnail.png' %}
-		{% set image = resize_image(path=image_path, width=500, op='fit_width') %}
-		<img src="{{ image.url }}" />
+		{% set image = resize_image(path=image_path, width=800, op='fit_width', format='jpg') %}
+		<img src="{{ image.url }}" loading="lazy"/>
 		<div class="mask"></div>
 	</a>
 </li>
+{% endmacro project_thumbnail%}

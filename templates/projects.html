@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/project-macros.html" as project_macros %}
 
 {% block content %}
 <div class="container">
@@ -15,30 +16,7 @@
 <div class="container no-mobile-padding">
     <ul class="project-thumbnail-list">
         {% for page in section.pages %}
-        <li class="project-thumbnail">
-            <a href="{{ page.permalink | safe }}">
-                {% if page.taxonomies %}
-                <div class="language-tagbar">
-                {% for lang in page.taxonomies.language %}
-                    <span class="language-tag">{{ lang }}</span>
-                {% endfor %}
-                </div>
-                {% endif %}
-                <div class="project-name-text">
-                    {{ page.title }}
-                    <br/>
-                    {% if page.extra.lead %}
-                    <div class="lead">
-                        {{ page.extra.lead }}
-                    </div>
-                    {% endif %}
-                </div>
-                {% set image_path = page.path ~ 'thumbnail.png' %}
-                {% set image = resize_image(path=image_path, width=500, op='fit_width') %}
-                <img src="{{ image.url }}" />
-                <div class="mask"></div>
-            </a>
-        </li>
+        {{ project_macros::project_thumbnail(page=page) }}
         {% endfor %}
     </ul>
     <br/>
