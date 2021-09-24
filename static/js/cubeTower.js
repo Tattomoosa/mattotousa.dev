@@ -141,7 +141,7 @@ const animate = () => {
 
   // cube has landed on tower
   if (cube.position.y < CUBE_STOP_Y) {
-    console.log({ cubeFallingSpeed, gravity, delta });
+    // console.log({ cubeFallingSpeed, gravity, delta });
     // TODO instead of adding cubes as children, create a mesh of the tower
     // with each cube during the initialization phase, and just set which
     // is visible based on phase.
@@ -152,21 +152,17 @@ const animate = () => {
     newCube.rotation.y = 0;
     switch (PHASES[currentPhase]) {
       case "drop1":
-        console.log("DROP1:", newCube.position);
         break;
       case "drop2":
         newCube.position.z -= 1;
-        console.log("DROP2:", newCube.position);
         break;
       case "drop3":
         newCube.position.z -= 1;
         newCube.position.x += 1;
-        console.log("DROP3:", newCube.position);
         break;
       case "drop4":
         newCube.position.x += 1;
         towerNeedsToDrop = true;
-        console.log("DROP4:", newCube.position);
         break;
     }
 

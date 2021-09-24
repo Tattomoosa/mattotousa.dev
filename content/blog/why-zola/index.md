@@ -1,5 +1,5 @@
 +++
-title = "Zola: My New Favorite"
+title = "Why Zola?"
 date = 2021-09-07
 [extra]
 lead = "One Static Site Generator to Rule Them All"
@@ -28,6 +28,31 @@ It has the standards you'd expect - Markdown content with some front-matter
 that renders out to template pages.
 
 ## The Good
+
+### _Speed_
+
+Zola is _fast_.
+
+Coming from mostly node-based workflows for web development,
+such as Webpack/Parcel or other static site generators like Gatsby, the speed seems
+unreal. Many times edits take less than 1 millisecond to build and reload the
+development server, and very rarely over 10.
+
+And because it builds out plain HTML, it's easy to make a site that loads _fast_
+too. Coming from working in React a lot, and doing a lot of work to optimize the
+initial paint (lazy-loading components, initial HTML that's a facsimile of the
+final design, etc.) it's been great to work with plain HTML again and just watch
+it load immediately -- because the page is already fully formed on the server,
+and it's just plain HTML/CSS/JavaScript.
+
+Don't get me wrong, I love React, especially the new functional components.
+It's a great technology for building
+applications with complex state. [CSZ@PDX](@/projects/csz-at-pdx/index.md) would have
+been a lot more difficult to build out without React.
+But for a _blog_? No thanks.
+The web does documents by default, so if I'm just serving documents I'd
+much rather just use the native web.
+And Zola excels for building this without much overhead.
 
 ### Flexible Structure Based on Files
 
@@ -61,6 +86,19 @@ set up _exactly_ the same way.
 
 ### Easy Internal Links
 
+Want a link on your site to another page on the site? Easy -- just link to the file.
+Take this link to the [CSZ@PDX](@/projects/csz-at-pdx/index.md) project,
+in the source file I'm working in, it looks like this:
+
+```md
+[CSZ@PDX](@/projects/csz-at-pdx/index.md)
+```
+
+`@` is partly a shorthand to the `content` directory but it also tells Zola
+it's looking at a _source path_ it needs to transform and not a real path.
+
+### Shortcodes and HTML Embedded in Markdown
+
 ### Anchors (Like This One)
 
 If you're on desktop right now, you can see the table of contents on the left.
@@ -88,21 +126,86 @@ from Zola's docs.
 {% endif%}
 ```
 
-### Simple composable templates
+### Simple Composeable Templates
+
+Zola allows templates to extend other templates, or loaded in as children.
+This is fantastic.
+I have one main template called `base.html` that all my other templates extend from.
+This template contains everything necessary for the header and footer of the site,
+so the templates extending it only need to worry about the actual content.
+
+<TODO>TODO figure out how to import child templates and put an example here</TODO>
 
 ### Easy Image Processing At Build Time
+
+I have a system where thumbnail images are input automatically from the folder
+containing the content, in a file called `thumbnail.png`.
+Take this post, which looks something like this on disk:
+
+```txt
+- blog
+  |- why-zola
+     |- index.md
+     |- thumbnail.png
+     |- other-picture.png
+     |- ...
+```
+
+In order to put the thumbnail on the Blog section, all I need to do is something
+like this:
+
+<!-- prettier-ignore -->
+```html
+{% for page in section.pages %}
+<a class="blog-summary" href="{{ page.permalink | safe }}">
+  {% set image_path = page.path ~ 'thumbnail.png' %}
+  {% set image = resize_image(path=image_path, width=300, op='fit_width') %}
+  <img src="{{ image.url }}" />
+  <!-- ... -->
+</a>
+{% endfor %}
+```
+
+The thumbnails on the Project page are done similarly.
 
 ### Sass (SCSS)
 
 Sass is the best approach to writing CSS. It utilizes everything that's good
 (and there is good) about native CSS, while adding another layer of organization.
 I don't write much of the Python-style Sass language, but the more CSS-looking
-SCSS is fantastic. And SCSS just works in Zola, just include it in your html as
-CSS.
+SCSS is fantastic. And SCSS just works in Zola, just by including it in your html
+with a `.css` extension.
 
 ## The Not So Good
 
 ### No line numbers
+
+> _EDIT:_ Zola _does_ support line numbers. For a markdown fenced codeblock like
+>
+> ````md
+> ```html
+> <div>Hello World</div>
+> ```
+> ````
+>
+> Simply add `,linenos` to the language string:
+>
+> ````md
+> ```html,linenos
+> <div>Hello World</div>
+> ```
+> ````
+>
+> _TADA!_ (Note: May still be in desperate need of styling.)
+>
+> ```html,linenos
+> <div>Hello World</div>
+> ```
+>
+> As far as I can tell, though, there's no way to make the line numbers start
+> at a specific number. This would be a really helpful feature for tutorial writing.
+> That said, the `linenos` trick wasn't in the docs so maybe
+> the feature exists and I just need to poke around in the source to find it.
 
 There's no line numbers in code rendering. No problem, I thought, inspecting
 the rendered output and seeing a bunch of `<span>` tags.
@@ -141,9 +244,25 @@ this site, and I sort of considered it a challenge to keep it that way.
 
 > Busted -- The mobile nav has a little bit of JavaScript, progressively enhanced.
 
-If you see line numbers on any of the real code snippets above, you know I caved.
+If you see line numbers on any of the real code snippets above, you know I caved
+and did some JavaScript to it.
 
-### One Frustrating Thing About The Docs
+### Small Frustrations The Docs
+
+#### The Tera Templating Engine
+
+If you want to do anything fancy with Zola, you _have to_ check the Tera docs.
+Tera is the templating engine Zola uses.
+This is to be expected for really complex templating manipulations,
+but in my opinion Zola's docs should have all common use cases covered with examples.
+This also isn't helped by Tera's docs, where the first section
+is about using the library from within a Rust context.
+
+An easy solution is that Zola could link straight to
+the [Templates Introduction](https://tera.netlify.app/docs/#introduction)
+which is really where most of the useful information for someone using Zola is.
+
+#### Syntax Highlighting Themes
 
 Okay this one drove me a bit crazy. Zola supports _a ton_ of syntax highlighting
 themes simply from setting them in the config file. **That's great**.
@@ -178,7 +297,7 @@ Search the web for "zola" though.
 Not exactly the Zola I wanted.
 Zola.com is some kind of wedding business.
 I don't know what they do exactly, but they have a big internet presence.
-Mild inconvenience at best.
+It's only a mild inconvenience, but I'm really reaching for downsides here, okay?
 
 ## The Point
 

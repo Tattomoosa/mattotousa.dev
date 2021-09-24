@@ -1,0 +1,24 @@
+<li class="project-thumbnail">
+	<a href="{{ page.permalink | safe }}">
+		{% if page.taxonomies %}
+		<div class="language-tagbar">
+		{% for lang in page.taxonomies.language %}
+			<span class="language-tag">{{ lang }}</span>
+		{% endfor %}
+		</div>
+		{% endif %}
+		<div class="project-name-text">
+			{{ page.title }}
+			<br/>
+			{% if page.extra.lead %}
+			<div class="lead">
+				{{ page.extra.lead }}
+			</div>
+			{% endif %}
+		</div>
+		{% set image_path = page.path ~ 'thumbnail.png' %}
+		{% set image = resize_image(path=image_path, width=500, op='fit_width') %}
+		<img src="{{ image.url }}" />
+		<div class="mask"></div>
+	</a>
+</li>
