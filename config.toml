@@ -2,8 +2,15 @@
 base_url = "https://mattotousa.dev"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
+minify_html = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+
+# uncomment to re-enable taxonomies
+# taxonomies = [
+#     { name = "language", feed = true },
+#     { name = "tag", feed = true }
+# ]
 
 [markdown]
 # Whether to do syntax highlighting
@@ -12,9 +19,5 @@ highlight_code = true
 # highlight_theme = "base16-ocean-dark"
 # highlight_theme = "agola-dark"
 highlight_theme = "nord"
-taxonomies = [
-    { name = "language", feed = true },
-    { name = "tag", feed = true }
-]
 
 # Put all your custom variables here

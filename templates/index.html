@@ -22,14 +22,13 @@
     <div class="cube-tower-fade-out-bottom"></div>
 </div>
 
-<div class="container no-mobile-padding">
     <br/>
     <br/>
     <br/>
     <br/>
-    <section>
+    <section class="container no-mobile-padding">
         <h1 class="section-title" style="text-align: center">Recent Projects</h1>
-        <ul class="project-thumbnail-list">
+        <ul class="project-thumbnail-list" style="margin-bottom: 0;">
             {{ project_elements::project_thumbnail(page=get_page(path="projects/csz-at-pdx/index.md")) }}
             {{ project_elements::project_thumbnail(page=get_page(path="projects/epa-rimm/index.md")) }}
             {{ project_elements::project_thumbnail(page=get_page(path="projects/ismyroadfresh/index.md")) }}
@@ -38,7 +37,7 @@
             <a class="nav-link-text more-link" href="/projects">See More <i class="las la-arrow-right"></i></a>
         </div>
     </section>
-    <section>
+    <section class="container">
         <h1 class="section-title" style="text-align: center">Recent Blog Posts</h1>
         <ul class="blog-list">
             {{ blog_elements::blog_summary(page=get_page(path="blog/why-zola/index.md")) }}
@@ -57,6 +56,5 @@
     <br/>
     <br/>
     <br/>
-</div>
 
 {% endblock content %}

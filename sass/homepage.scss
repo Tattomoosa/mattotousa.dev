@@ -1,5 +1,7 @@
 @import "./_variables.scss";
 
+$fade-tower-length: 50px;
+
 .main-title {
   text-align: right;
   position: absolute;
@@ -31,11 +33,11 @@
 
 .cube-tower-fade-out-bottom {
   z-index: 1000;
-  width: 100vw;
+  width: calc(100vw + #{$fade-tower-length * 2});
   position: absolute;
   bottom: 0;
   height: 100%;
-  box-shadow: inset 0 -100px 100px -50px $bg-color;
+  box-shadow: inset 0 -#{$fade-tower-length * 2} $fade-tower-length -50px $bg-color;
 }
 
 .fallback-img {
