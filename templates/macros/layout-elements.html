@@ -1,7 +1,7 @@
 {% macro nav_link(text, href) %}
 	<li
 		class="nav-link-item">
-		<a href={{ href }}
+		<a href="{{ href }}"
 			class="nav-link-text
 				{% if current_path and current_path is starting_with(href) %}
 					nav-link-active
@@ -10,6 +10,16 @@
 		</a>
 	</li>
 {% endmacro nav_link %}
+
+{% macro nav_link_icon(icon, href) %}
+	<li>
+		<a
+			href="{{ href }}"
+			class="icon-link nav-link-text">
+			<i class="{{ icon }}"></i>
+		</a>
+	</li>
+{% endmacro nav_link_icon %}
 
 {% macro header() %}
 <header class="nav-bar">
@@ -59,7 +69,6 @@
 				// if javascript is enabled, hide navLinks by default
 				const navLinks = document.querySelector("#header-nav-links");
 				navLinks.classList.remove("is-active");
-
 			</script>
 		</nav>
 
@@ -76,36 +85,35 @@
 		</div>
 		<div class="flex-spacer"></div>
 		<ul class="nav-links">
+			{# TODO why doesn't this work??? Seems like it should
+			{{ self::nav_link_icon(icon="lab la-github", href="https://github.com/Tattomoosa") }}
+			#}
 			<li>
 				<a class="icon-link nav-link-text" href="https://github.com/Tattomoosa">
 					<i class="lab la-github"></i>
 				</a>
 			</li>
 			<li>
-				<a class="icon-link nav-link-text" href="https://codepen.io/Tattomoosa">
-					<i class="lab la-codepen"></i>
-				</a>
-			</li>
-			<li>
-				<a class="icon-link nav-link-text">
-					<i class="lab la-stack-overflow"></i>
-				</a>
-			</li>
-			<li>
-				<a class="icon-link nav-link-text">
+				<a class="icon-link nav-link-text" href="https://www.instagram.com/mattopaints/">
 					<i class="lab la-instagram"></i>
 				</a>
 			</li>
 			<li>
-				<a class="icon-link nav-link-text">
+				<a class="icon-link nav-link-text" href="https://www.youtube.com/channel/UCuUTv3O40RzriuN1gQ7ygbw">
 					<i class="lab la-youtube"></i>
 				</a>
 			</li>
 			<li>
-				<a class="icon-link nav-link-text">
+				<a id="e" class="icon-link nav-link-text" href="/please-turn-on-javascript">
 					<i class="las la-envelope"></i>
 				</a>
 			</li>
+			<script defer>
+				const pieces1 = ["ma", "il", "to", ":", "m", "lo", "to", "usa"];
+				const pieces2 = ["gma", "il", ".", "com"];
+				const el = document.getElementById("e");
+				el.href=[pieces1.join(""), pieces2.join("")].join("@");
+			</script>
 		</ul>
 
 		</div>
