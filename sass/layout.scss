@@ -21,8 +21,11 @@ body {
   padding: 0;
 
   @media screen and (min-width: 1221px) {
+    /*
     margin-left: calc(50vw - 600px);
     margin-right: calc(50vw - 600px);
+    */
+    margin: auto;
   }
 
   @media screen and (max-width: 1220px) {
@@ -211,6 +214,9 @@ footer {
 
 .align-right {
   text-align: right;
+}
+.align-left {
+  text-align: left;
 }
 
 .centered {

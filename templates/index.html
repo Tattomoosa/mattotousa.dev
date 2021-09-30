@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% import "macros/project-macros.html" as project_elements %}
 {% import "macros/blog-elements.html" as blog_elements %}
+{% import "macros/layout-elements.html" as layout_elements %}
 
 {% block content %}
 
@@ -15,6 +16,7 @@
     </div>
 </div>
 
+
 <div class="cube-tower-container">
     <div id="cube-tower" class="fill-parent">
         <img class="fallback-img" src="no-js-fallback-cubetower.png"/>
@@ -27,7 +29,50 @@
     <br/>
     <br/>
     <section class="container no-mobile-padding">
-        <h1 class="section-title" style="text-align: center">Recent Projects</h1>
+        <div style="text-align: center;">
+            <img src="/homepage-images/profile-pic.png" class="profile-img"/>
+        </div>
+        <br/>
+        <br/>
+        <div class="markdown-content bio">
+            <div style="padding: 0 40px;">
+                <p>
+                    Matt O'Tousa
+                    is a software engineer specializing in web and interactive media.
+                    He lives in Portland, Oregon and has an MS in Computer Science and a BA in Telecommunications.
+                    Beyond his technical expertise,
+                    he also brings to the table a background in visual art, design and communication.
+                </p>
+                <p>
+                    He has worked on software used by
+                    The Oregon Department of Transportation,
+                    FLIR Systems,
+                    Portland State University,
+                    and more.
+                </p>
+
+            </div>
+            <br/>
+            <br/>
+            <div class="bio-link-container bio-link-container-left">
+                <a class="nav-link-text e--" href="/please-enable-javascript">
+                    <i class="las la-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+            <div class="bio-link-container">
+                <a class="nav-link-text" href="/about">
+                    <i class="las la-arrow-right"></i>
+                    Read More
+                </a>
+            </div>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <section class="container no-mobile-padding">
+        {{ layout_elements::homepage_section_title(text="Projects", href="/projects") }}
         <ul class="project-thumbnail-list" style="margin-bottom: 0;">
             {{ project_elements::project_thumbnail(page=get_page(path="projects/csz-at-pdx/index.md")) }}
             {{ project_elements::project_thumbnail(page=get_page(path="projects/epa-rimm/index.md")) }}
@@ -38,7 +83,7 @@
         </div>
     </section>
     <section class="container">
-        <h1 class="section-title" style="text-align: center">Recent Blog Posts</h1>
+        {{ layout_elements::homepage_section_title(text="Blog", href="/blog") }}
         <ul class="blog-list">
             {{ blog_elements::blog_summary(page=get_page(path="blog/why-zola/index.md")) }}
         </ul>

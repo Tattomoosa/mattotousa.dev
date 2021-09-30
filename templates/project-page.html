@@ -11,9 +11,16 @@
         <br/>
         <br/>
         <br/>
-        <br/>
 
         <div class="article">
+            {% if page.date %}
+            <span class="date">
+                {% if page.extra.start_date %}
+                    {{ page.extra.start_date }} &ndash;
+                {% endif %}
+                {{ page.date }}
+            </span>
+            {% endif %}
             <h1 class="title">
                 {{ page.title }}
             </h1>
@@ -25,23 +32,16 @@
             {% endif %}
             <br/>
             <div>
-                {% if page.date %}
-                <span class="date">
-                    {{ page.date }}
-                </span>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                {% endif %}
                 <!-- Languages -->
+                <span class="language-tagbar">
                 {% if page.taxonomies.language %}
-                {% for lang in page.taxonomies.language %}
-                <span class="language-tag">{{ lang }}</span>
-                {% endfor %}
+                    {% for lang in page.taxonomies.language %}
+                        <span class="language-tag">{{ lang }}</span>
+                    {% endfor %}
                 {% endif %}
+                </span>
             </div>
 
-            <br/>
             <br/>
             <br/>
 

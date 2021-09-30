@@ -44,6 +44,16 @@ $project-page-break-to-mobile: 900px;
   .title {
     font-size: 24px;
   }
+  .date {
+    font-size: 11px;
+  }
+  .language-tagbar {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .language-tag {
+      margin-right: 2px;
+    }
+  }
   @media screen and (min-width: $project-page-break-to-mobile) {
     padding: 1px 60px;
     .title {

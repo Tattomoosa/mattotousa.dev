@@ -1,7 +1,7 @@
 @import "./_variables.scss";
 
-$sidebar-width: 450px;
-$sidebar-skinny-width: 320px;
+$sidebar-width: 240px;
+$sidebar-skinny-width: 240px;
 $sidebar-skinny-switch: 1200px;
 
 $sidebar-vpad: 53px;
@@ -9,6 +9,11 @@ $content-padding: 30px;
 $mobile-content-padding: 0;
 
 $blog-break-to-mobile: 900px;
+
+.max-width-1000 {
+  max-width: 1000px;
+  margin: auto;
+}
 
 .blog-list {
   list-style: none;
@@ -155,6 +160,7 @@ hr.blog-summary-separator {
   line-height: 1.6;
   padding: $content-padding;
   padding-top: 80px;
+  max-width: 700px;
 
   // desktop
   @media screen and (min-width: $blog-break-to-mobile) {
@@ -182,17 +188,20 @@ hr.blog-summary-separator {
   // "h1" li
   li {
     text-transform: uppercase;
-    margin-top: 10px;
-    font-size: 12px;
-    line-height: 1.4;
+    font-weight: bold;
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 2;
   }
   ul {
     list-style-type: none;
     // "h2" li
     li {
+      font-weight: normal;
       font-size: 12px;
       text-transform: initial;
       margin-top: 1px;
+      line-height: 1.6;
     }
   }
 }

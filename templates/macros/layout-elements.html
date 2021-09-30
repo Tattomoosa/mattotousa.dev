@@ -104,15 +104,17 @@
 				</a>
 			</li>
 			<li>
-				<a id="e" class="icon-link nav-link-text" href="/please-turn-on-javascript">
+				<a id="e" class="icon-link nav-link-text e--" href="/please-turn-on-javascript">
 					<i class="las la-envelope"></i>
 				</a>
 			</li>
 			<script defer>
 				const pieces1 = ["ma", "il", "to", ":", "m", "lo", "to", "usa"];
 				const pieces2 = ["gma", "il", ".", "com"];
-				const el = document.getElementById("e");
-				el.href=[pieces1.join(""), pieces2.join("")].join("@");
+				// const el = document.getElementById("e");
+				const elements = document.querySelectorAll(".e--")
+				for (el of elements)
+					el.href=[pieces1.join(""), pieces2.join("")].join("@");
 			</script>
 		</ul>
 
@@ -120,3 +122,11 @@
 	</div>
 </footer>
 {% endmacro footer %}
+
+{% macro homepage_section_title(text, href) %}
+	<a class="" href={{ href }}>
+		<h1 class="nav-link-text section-title" style="width: 100%; text-align: center;">
+			{{ text }}
+		</h1>
+	</a>
+{% endmacro homepage_section_title %}

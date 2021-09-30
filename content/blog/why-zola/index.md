@@ -5,14 +5,16 @@ date = 2021-09-07
 lead = "One Static Site Generator to Rule Them All"
 +++
 
-There are a lot of static site generators out there. And most of them are pretty
-good choices. Before I settled on using Zola, I built out very small sites in
-several of these frameworks, including Hugo, Gatsby, NextJS.
+There are a _lot_ of static site generators out there.
+Before I settled on using Zola,
+I built out very small sites in
+several frameworks, including
+Hugo, Gatsby, and NextJS.
 
-You already know I settled on Zola, which is a fantastic choice.
+You already know I settled on Zola.
 It is, in my opinion, more flexible and yet simpler than the alternatives.
-I have a couple of things I would like to see added, but my experience with it
-so far has been great.
+I have a couple of things I would like to see added,
+but my experience with it so far has been great.
 
 <!-- more -->
 
@@ -97,7 +99,9 @@ in the source file I'm working in, it looks like this:
 `@` is partly a shorthand to the `content` directory but it also tells Zola
 it's looking at a _source path_ it needs to transform and not a real path.
 
-### Shortcodes and HTML Embedded in Markdown
+### Shortcodes
+
+### Embedded HTML
 
 ### Anchors (Like This One)
 

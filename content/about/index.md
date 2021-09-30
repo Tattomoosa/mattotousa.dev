@@ -3,14 +3,14 @@ title="About Me"
 template="blog-page.html"
 +++
 
-![Standing in the Alvord Desert](me.jpg)
-
 ##### Chapter 1
 
 One day, I am told, I was born.
 I don't remember that very well though.
 Eventually I went to Ball State University for Audio Engineering
 and got a Bachelor's.
+
+![Standing in the Alvord Desert](me.jpg)
 
 ##### Chapter 2
 
