@@ -30,7 +30,9 @@
     <br/>
     <section class="container no-mobile-padding">
         <div style="text-align: center;">
-            <img src="/homepage-images/profile-pic.png" class="profile-img"/>
+            {% set profile_pic_path = '/homepage-images/profile-pic.png' %}
+            {% set profile_img = resize_image(path=profile_pic_path, width=230, op='fit_width', format='jpg') %}
+            <img src="{{ profile_img.url }}" class="profile-img"/>
         </div>
         <br/>
         <br/>

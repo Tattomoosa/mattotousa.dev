@@ -5,7 +5,7 @@ date = 2021-09-20
 [taxonomies]
 language=["React", "TypeScript", "Python", "Web Workers", "SciPy", "MatLab"]
 [extra]
-lead="Civil Engineering tools built to study \"The Big One\""
+lead="Civil Engineering tools to study \"The Big One\""
 start_date = 2018-06-01
 +++
 
