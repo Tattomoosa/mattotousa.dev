@@ -23,10 +23,18 @@ const CUBE_START_Y = 5;
 const CUBE_STOP_Y = TOWER_TOP + HALF_CUBE_SIZE;
 const CUBE_ROTATION_SPEED = 1.7435 * GLOBAL_SPEED_MODIFIER;
 const CUBE_START_ROTATION = 0;
+const CUBE_FADE_SPEED = 1.5 * GLOBAL_SPEED_MODIFIER;
 
 const DEG_90 = Math.PI / 2;
 
-const CUBE_MATERIAL = new THREE.LineBasicMaterial({ color: CUBE_COLOR });
+const CUBE_MATERIAL = new THREE.LineBasicMaterial({
+  color: CUBE_COLOR,
+});
+const FALLEN_CUBE_MATERIAL = new THREE.LineBasicMaterial({
+  color: CUBE_COLOR,
+  transparent: true,
+  opacity: 1,
+});
 const LINE_MATERIAL = new THREE.LineBasicMaterial({ color: LINE_COLOR });
 
 const PHASES = ["drop1", "drop2", "drop3", "drop4"];
@@ -35,6 +43,7 @@ const FADE_SPEED = 0x010101;
 
 var currentPhase = 0;
 var towerNeedsToDrop = false;
+var towerNeedsToStartDrop = false;
 
 const scene = new THREE.Scene();
 
@@ -104,6 +113,7 @@ const animate = () => {
 
   const delta = clock.getDelta();
 
+  // Adjust constants for the timing of this frame
   const towerSpinSpeed = TOWER_SPIN_SPEED * delta;
   const towerDropSpeed = TOWER_DROP_SPEED * delta;
   const cubeRotationSpeed = CUBE_ROTATION_SPEED * delta;
@@ -111,13 +121,24 @@ const animate = () => {
 
   switch (PHASES[currentPhase]) {
     case "drop1":
+      if (towerNeedsToStartDrop) {
+        towerNeedsToStartDrop = false;
+        towerNeedsToDrop = true;
+        tower.position.y += 1;
+        for (let child of tower.children) {
+          child.material = FALLEN_CUBE_MATERIAL;
+          child.position.y -= 1;
+        }
+      }
       // drop tower if it's not finished dropping
       if (towerNeedsToDrop) {
         tower.position.y -= towerDropSpeed;
-        if (tower.position.y <= TOWER_POSITION_Y - 1) {
+        FALLEN_CUBE_MATERIAL.opacity -= CUBE_FADE_SPEED * delta;
+        if (tower.position.y <= TOWER_POSITION_Y) {
           towerNeedsToDrop = false;
           tower.remove(...tower.children);
           tower.position.y = TOWER_POSITION_Y;
+          FALLEN_CUBE_MATERIAL.opacity = 1;
         }
       }
       if (tower.rotation.y > DEG_90) tower.rotation.y = -DEG_90;
@@ -165,7 +186,8 @@ const animate = () => {
         break;
       case "drop4":
         newCube.position.x += 1;
-        towerNeedsToDrop = true;
+        // towerNeedsToDrop = true;
+        towerNeedsToStartDrop = true;
         break;
     }
 
