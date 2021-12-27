@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/github-link.html" as github_link %}
 
 {% block content %}
 <img src="thumbnail.png" class="background-image" />
@@ -6,6 +7,9 @@
 <div class="spacer"></div>
 <div class="container no-mobile-padding">
     <div class="article-paper bg-color">
+        {% if page.extra.github_link%}
+            {{ github_link::github_link(href=page.extra.github_link) }}
+        {% endif %}
 
         <br/>
         <br/>

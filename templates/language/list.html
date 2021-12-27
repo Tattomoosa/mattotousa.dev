@@ -1,1 +1,29 @@
-HELLO
+{% extends "base.html" %}
+{% import "macros/project-macros.html" as project_macros %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title margin-top-100">View Project By Language</h1>
+
+    <br />
+    <br />
+    <br />
+</div>
+<div class="container no-mobile-padding">
+	<ul>
+        {% for term in terms %}
+		<li>
+			<a
+				href="{{ current_url }}{{ term.slug }}"
+			>
+			{{ term.name }}
+			</a>
+		</li>
+        {% endfor %}
+	</ul>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</div>
+{% endblock content %}

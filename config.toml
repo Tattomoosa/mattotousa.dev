@@ -6,11 +6,12 @@ minify_html = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+slugify.taxonomies = "on"
 # uncomment to re-enable taxonomies
-# taxonomies = [
-#     { name = "language", feed = true },
-#     { name = "tag", feed = true }
-# ]
+taxonomies = [
+    { name = "language", feed = true },
+    { name = "tag", feed = true }
+]
 
 [markdown]
 # Whether to do syntax highlighting
@@ -19,5 +20,3 @@ highlight_code = true
 # highlight_theme = "base16-ocean-dark"
 # highlight_theme = "agola-dark"
 highlight_theme = "nord"
-
-# Put all your custom variables here

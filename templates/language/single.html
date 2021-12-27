@@ -1,1 +1,31 @@
-HI
+{% extends "base.html" %}
+{% import "macros/project-macros.html" as project_macros %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title margin-top-100">Projects</h1>
+
+    <h5 class="title-subscript">
+        Made with 
+		<span class="language-tag">
+			{{ term.name }}
+		</span>
+    </h5>
+
+    <br />
+    <br />
+    <br />
+</div>
+<div class="container no-mobile-padding">
+    <ul class="project-thumbnail-list">
+        {% for page in term.pages %}
+        {{ project_macros::project_thumbnail(page=page) }}
+        {% endfor %}
+    </ul>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+	<a href="/projects">See all projects</a>
+</div>
+{% endblock content %}
