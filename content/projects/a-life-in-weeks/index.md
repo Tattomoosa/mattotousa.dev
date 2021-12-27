@@ -1,12 +1,13 @@
 +++
 title="A Life in Weeks"
 weight=14
-date = 2016-06-07
+date=2016-06-07
 [taxonomies]
 language=["JavaScript"]
 [extra]
-lead="A spreadsheet of mortality"
-start_date = 2016-06-05
+lead="Mortality in a spreadsheet"
+github_link="https://github.com/Tattomoosa/a-life-in-weeks"
+start_date=2016-06-05
 +++
 
 Inspired by

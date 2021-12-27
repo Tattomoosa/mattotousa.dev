@@ -38,4 +38,4 @@ I'm still thinking on it from time to time -- but I think I need to re-evaluate.
 Part of me would really like to add more 4X elements but I also want to keep it simple.
 I'm hoping to figure out some more elegant solutions down the line and revisit it.
 
-You can [Play it here on Itch.io](https://tattomoosa.itch.io/chess-4x)
+You can [Play it here on Itch.io](https://tattomoosa.itch.io/chess-4x).

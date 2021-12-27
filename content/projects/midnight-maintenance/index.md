@@ -11,7 +11,7 @@ lead = "ALL HAIL THE POWER COMPANY"
 This was my entry in the October 2021 Ludum Dare Compo, a biannual solo 48-hour game jam.
 The theme this time around was "Unstable".
 I built a spoopy first-person shooter with mouth sounds for all the sound effects.
-It came out pretty well! Since the deadline, I've uploaded a "post-jam" version,
-which has drastically improved environments and
+It came out pretty well! Since the deadline, I've uploaded a "post-jam" version
+with drastically improved environments and pacing and some clarification on story beats.
 
 [Check It Out](https://tattomoosa.itch.io/midnight-maintenance)
