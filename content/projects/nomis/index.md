@@ -4,5 +4,5 @@ weight=30
 [taxonomies]
 language=["JavaScript"]
 [extra]
-lead="Yeah, it's Simon"
+lead="Yeah, it's just Simon"
 +++
