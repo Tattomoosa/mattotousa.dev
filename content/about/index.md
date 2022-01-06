@@ -6,9 +6,11 @@ template="blog-page.html"
 ##### Chapter 1
 
 One day, I am told, I was born.
-I don't remember that very well though.
-Eventually I went to Ball State University for Audio Engineering
-and got a Bachelor's.
+I don't remember that but I'm inclined to believe that it did happen.
+Eventually I went to Ball State University. Initially I majored in Fine Art
+with a concentration in painting,
+but soon I switched to Telecommunications with a focus in
+Audio Engineering.
 
 ![Standing in the Alvord Desert](me.jpg)
 
@@ -43,13 +45,7 @@ Soon, I would be working as a Front End Developer.
 
 ##### Chapter 5
 
-I met my partner. She also has a dog, named Ty.
-
-![Ty is cute too](ty_the_dog.jpg)
-
-##### Chapter 6
-
-We moved to Portland, Oregon.
+I moved to Portland, Oregon.
 
 ![Welcome to Oregon](welcome_to_oregon.png)
 I did contract work in web development for a while.
@@ -58,7 +54,7 @@ I liked working in web, but I had tasted the power of programming and I knew tha
 
 > "_I had to go deeper_"
 
-##### Chapter 7
+##### Chapter 6
 
 So I got a Master's degree from Portland State University in Computer Science.
 I worked on some research,
@@ -66,7 +62,7 @@ building tools to help Civil Engineers study Earthquakes
 and on cutting-edge Server Security.
 I took some classes too, and learned some pretty neat stuff.
 
-##### Chapter 8
+##### Chapter 7
 
 Tune in next time to find out...
 
