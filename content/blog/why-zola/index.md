@@ -44,21 +44,23 @@ And because it builds out plain HTML, it's easy to make a site that loads _fast_
 too. Coming from working in React a lot, and doing a lot of work to optimize the
 initial paint (lazy-loading components, initial HTML that's a facsimile of the
 final design, etc.) it's been great to work with plain HTML again and just watch
-it load immediately -- because the page is already fully formed on the server,
-and it's just plain HTML/CSS/JavaScript.
+it load immediately.
 
-Don't get me wrong, I love React, especially the new functional components.
+Don't get me wrong, I love React, especially the newer functional components and
+useState features.
 It's a great technology for building
 applications with complex state. [CSZ@PDX](@/projects/csz-at-pdx/index.md) would have
-been a lot more difficult to build out without React.
+been a _lot_ more difficult to build out without React.
 But for a _blog_? No thanks.
 The web does documents by default, so if I'm just serving documents I'd
-much rather just use the native web.
+much rather just basic web technology.
 And Zola excels for building this without much overhead.
 
 ### Flexible Structure Based on Files
 
 Zola doesn't care if you're making a blog or something else entirely.
+This was a huge selling point for me because I wanted the Project section.
+(Which, as of right now, has a ton more content than the blog)
 It generates pages based off of any files or folders in the `content` directory.
 For example, in the source for this site, the file
 that will become this page is at `/content/blog/why_zola.md`.
@@ -99,9 +101,32 @@ in the source file I'm working in, it looks like this:
 `@` is partly a shorthand to the `content` directory but it also tells Zola
 it's looking at a _source path_ it needs to transform and not a real path.
 
-### Shortcodes
+### Shortcodes & Embedded HTML
 
-### Embedded HTML
+Another pet peeve of mine with static site generators is that markdown content
+is often far too restrictive. If you want to put in some kind of 'widget', often
+the process is fairly complicated if you're not simply out of luck.
+Zola solves this by allowing embedded HTML and something they call "shortcodes".
+Embedding HTML is obviously kind of gross for all but the simplest tasks, but still
+in my opinion a very important feature to have for the odd small one-off formatting
+sort of thing.
+
+Shortcodes, however, are awesome.
+They are basically simple "functions" that allow for easily embedding complex HTML/JS
+components into Markdown. A really good example from the
+[docs](https://www.getzola.org/documentation/content/shortcodes/)
+is a YouTube embed function:
+
+```zola
+<div {% if class %}class="{{class}}"{% endif %}>
+    <iframe
+        src="https://www.youtube.com/embed/{{id}}{% if autoplay %}?autoplay=1{% endif %}"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div>
+```
 
 ### Anchors (Like This One)
 
@@ -137,8 +162,6 @@ This is fantastic.
 I have one main template called `base.html` that all my other templates extend from.
 This template contains everything necessary for the header and footer of the site,
 so the templates extending it only need to worry about the actual content.
-
-<TODO>TODO figure out how to import child templates and put an example here</TODO>
 
 ### Easy Image Processing At Build Time
 
@@ -246,7 +269,7 @@ and sending it completely formed.
 At the time of this writing, the [ThreeJS](https://threejs.org/) homepage is the _only_ JavaScript on
 this site, and I sort of considered it a challenge to keep it that way.
 
-> Busted -- The mobile nav has a little bit of JavaScript, progressively enhanced.
+> Busted -- The mobile nav does have a little bit of JavaScript, progressively enhanced.
 
 If you see line numbers on any of the real code snippets above, you know I caved
 and did some JavaScript to it.
