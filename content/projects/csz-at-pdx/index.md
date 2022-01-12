@@ -9,7 +9,7 @@ lead="Civil Engineering tools to study \"The Big One\""
 start_date = 2018-06-01
 +++
 
-The [CSZ@PDX](https://m9csz.cee.pdx.edu/m9csz/) project contains two separate
+The CSZ@PDX project contains two separate
 data visualization applications built to enable Civil Engineers to more easily
 analyze ground motions in the Cascadia Subduction Zone.
 The aim is to provide information that will help researchers and engineers
@@ -54,7 +54,7 @@ or in common GeoJSON for analysis in external tools.
 
 ## M9 Application
 
-[Check it out](https://m9csz.cee.pdx.edu/m9csz/)
+[Check it out](https://m9csz.cee.pdx.edu/)
 
 This application is an interface for exploring and evaluating the _huge_ dataset
 generated from a series of simulations performed by the University of Washington
@@ -67,7 +67,7 @@ Only a small subset of this data is available publicly without logging in.
 
 ## ARS Application
 
-[Check it out](https://m9csz.cee.pdx.edu/ars/)
+[Check it out](https://csz.cee.pdx.edu/)
 
 The ARS application started life as a separate project which existed as a tiny
 web page with a form processed by PHP that called into MATLAB. This downloaded a file.
