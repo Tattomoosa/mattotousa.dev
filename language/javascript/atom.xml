@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - JavaScript</title>
+	<link href="https://mattotousa.dev/language/javascript/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://mattotousa.dev"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-09-20T00:00:00+00:00</updated>
+	<id>https://mattotousa.dev/language/javascript/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Swatcher</title>
+		<published>2021-09-20T00:00:00+00:00</published>
+		<updated>2021-09-20T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/swatcher/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/swatcher/</id>
+		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tattomoosa.github.io&#x2F;swatcher&#x2F;&quot;&gt;Check it out!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>PSU MCECS Status Page</title>
+		<published>2021-08-30T00:00:00+00:00</published>
+		<updated>2021-08-30T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/mcecs-status/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/mcecs-status/</id>
+		<content type="html">&lt;p&gt;The MCECS Status Page is a real-time status dashboard showing the current status of servers and
+services in the Portland State University Maseeh College of Engineering and Computer Science.&lt;&#x2F;p&gt;
+&lt;p&gt;This page allows users to check whether or not they&#x27;re on the PSU network,
+which servers are currently down, and several stats about the device the user
+is visiting the page from.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;status.cecs.pdx.edu&#x2F;&quot;&gt;Check it out&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>The Garden</title>
+		<published>2019-04-30T00:00:00+00:00</published>
+		<updated>2019-04-30T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/the-garden/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/the-garden/</id>
+		<content type="html"></content>
+	</entry>
+	<entry xml:lang="en">
+		<title>A Life in Weeks</title>
+		<published>2016-06-07T00:00:00+00:00</published>
+		<updated>2016-06-07T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/a-life-in-weeks/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/a-life-in-weeks/</id>
+		<content type="html">&lt;p&gt;Inspired by
+&lt;a href=&quot;https:&#x2F;&#x2F;waitbutwhy.com&#x2F;2014&#x2F;05&#x2F;life-weeks.html&quot;&gt;a post&lt;&#x2F;a&gt;
+on the blog
+&lt;a href=&quot;https:&#x2F;&#x2F;waitbutwhy.com&#x2F;&quot;&gt;Wait but Why&lt;&#x2F;a&gt;,
+this is a website that fills out a table representing every week
+&amp;quot;in your life&amp;quot; (up to a user-configurable life expectancy)
+where the filled in cells represent the weeks already passed,
+and the empty cells those yet to come.&lt;&#x2F;p&gt;
+&lt;p&gt;This was one of my first-ever completed web projects, and I&#x27;m pleasantly surprised
+that it isn&#x27;t completely terrible.
+There are of course plenty of things I would do differently now,
+but overall it more or less holds up.&lt;&#x2F;p&gt;
+&lt;p&gt;What I&#x27;m &lt;em&gt;not&lt;&#x2F;em&gt; pleasantly surprised about is how many more boxes are filled in now
+than were when I first built this in 2016.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tattomoosa.github.io&#x2F;a-life-in-weeks&#x2F;&quot;&gt;Check it out&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

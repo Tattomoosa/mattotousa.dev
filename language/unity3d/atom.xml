@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - Unity3D</title>
+	<link href="https://mattotousa.dev/language/unity3d/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://mattotousa.dev"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-10-03T00:00:00+00:00</updated>
+	<id>https://mattotousa.dev/language/unity3d/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Midnight Maintenance</title>
+		<published>2021-10-03T00:00:00+00:00</published>
+		<updated>2021-10-03T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/midnight-maintenance/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/midnight-maintenance/</id>
+		<content type="html">&lt;p&gt;This was my entry in the October 2021 Ludum Dare Compo, a biannual solo 48-hour game jam.
+The theme this time around was &amp;quot;Unstable&amp;quot;.
+I built a spoopy first-person shooter with mouth sounds for all the sound effects.
+It came out pretty well! Since the deadline, I&#x27;ve uploaded a &amp;quot;post-jam&amp;quot; version
+with drastically improved environments and pacing and some clarification on story beats.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tattomoosa.itch.io&#x2F;midnight-maintenance&quot;&gt;Check It Out&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Chess 4X</title>
+		<published>2021-08-01T00:00:00+00:00</published>
+		<updated>2021-08-01T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/chess4x/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/chess4x/</id>
+		<content type="html">&lt;p&gt;The idea here is that it&#x27;s a take on Chess with inspiration from 4X games.
+I had a couple ideas that were fun to explore, but it&#x27;s been sitting unfinished for a while now.&lt;&#x2F;p&gt;
+&lt;p&gt;The gist of it was that every turn your king makes one pawn, and by
+arranging those pawns into the shapes another piece moves by you can
+transform those pawns into a knight, bishop, or rook.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s simpler than it sounds, hopefully a little easier to grok with pictures.&lt;&#x2F;p&gt;
+&lt;p&gt;An &amp;quot;L&amp;quot; of pawns creates a Knight.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.itch.zone&#x2F;aW1nLzEyOTgxMjAuZ2lm&#x2F;original&#x2F;v9RvAt.gif&quot; alt=&quot;Creating a Knight&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;4 diagonal pawns create a Bishop.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.itch.zone&#x2F;aW1nLzEyOTgxMTkuZ2lm&#x2F;original&#x2F;7G3n2e.gif&quot; alt=&quot;Creating a Bishop&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;4 horizontal pawns create a Rook.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.itch.zone&#x2F;aW1nLzEyOTgxMjMuZ2lm&#x2F;original&#x2F;d%2BCvGY.gif&quot; alt=&quot;Creating a Rook&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I still think it&#x27;s a pretty neat idea, but as is it&#x27;s simply not that interesting to play.
+A winner tends to emerge relatively quickly,
+but with the King spitting out pawns getting checkmate is fairly difficult.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m still thinking on it from time to time -- but I think I need to re-evaluate.
+Part of me would really like to add more 4X elements but I also want to keep it simple.
+I&#x27;m hoping to figure out some more elegant solutions down the line and revisit it.&lt;&#x2F;p&gt;
+&lt;p&gt;You can &lt;a href=&quot;https:&#x2F;&#x2F;tattomoosa.itch.io&#x2F;chess-4x&quot;&gt;Play it here on Itch.io&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Turn Left</title>
+		<published>2020-10-05T00:00:00+00:00</published>
+		<updated>2020-10-05T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/turn-left/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/turn-left/</id>
+		<content type="html">&lt;p&gt;This is a game my friend Scott Patterson and I made for the 2020 October Ludum Dare.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

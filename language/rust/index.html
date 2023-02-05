@@ -1,0 +1,28 @@
+<!doctype html><html lang=en><head><meta charset=utf8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Matt O'Tousa | Software Engineer</title><meta content="Matt O'Tousa is a software engineer living in Portland, OR." name=description><link href=https://mattotousa.dev/index.css rel=stylesheet><link href=https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css rel=stylesheet><body class=no-js><script>document.body.classList.remove('no-js');</script><header class=nav-bar><div class="container flex"><a class=nav-logo href=/> Matt O'Tousa <div class=nav-logo-subscript>Software Engineer</div> </a><div class=flex-spacer></div><nav role=navigation><ul class="nav-links is-active" id=header-nav-links><li class=nav-link-item><a class=nav-link-text href=/blog> Blog </a><li class=nav-link-item><a class=nav-link-text href=/projects> Projects </a><li class=nav-link-item><a class=nav-link-text href=/about> About </a></ul><button aria-controls=header-nav-links aria-expanded=false id=nav-toggle><i id=nav-icon></i> <span>Menu</span></button><script defer>// only have toggle button if javascript is enabled --
+				// otherwise, nav will be shown anyway
+				const navToggle = document.querySelector("#nav-toggle");
+				navToggle.classList.add("enabled");
+
+				// draw icon
+				const navIcon = document.querySelector("#nav-icon");
+				navIcon.classList.add("las", "la-bars");
+				// make button work
+				navToggle.addEventListener("click", () => {
+					const isActive = navLinks.classList.toggle("is-active")
+					if (isActive) {
+						navIcon.className = "las la-times"
+						navToggle.setAttribute('aria-expanded', 'true');
+					} else {
+						navIcon.className = "las la-bars"
+						navToggle.setAttribute('aria-expanded', 'false');
+					}
+				});
+
+				// if javascript is enabled, hide navLinks by default
+				const navLinks = document.querySelector("#header-nav-links");
+				navLinks.classList.remove("is-active");</script></nav></div></header><div class=fill-page><div class=container><h1 class="title margin-top-100">Projects</h1><h5 class=title-subscript>Made with <span class=language-tag> Rust </span></h5><br><br><br></div><div class="container no-mobile-padding"><ul class=project-thumbnail-list><li class=project-thumbnail><a href=https://mattotousa.dev/projects/prowl/> <div class=language-tagbar><span class=language-tag>Rust</span></div> <div class=project-name-text>Prowl <br><div class=lead>The PROcedural WorLd generator</div></div> <img loading=lazy src=https://mattotousa.dev/processed_images/a15336699906fc8900.jpg> <div class=mask></div> </a></ul><br><br><br><br><a href=/projects>See all projects</a></div><footer><div class=container><div class=flex><div class=made-with>Made with <a href=https://www.getzola.org/>Zola</a></div><div class=flex-spacer></div><ul class=nav-links><li><a class="icon-link nav-link-text" href=https://github.com/Tattomoosa> <i class="lab la-github"></i> </a><li><a class="icon-link nav-link-text" href=https://www.instagram.com/mattotousa/> <i class="lab la-instagram"></i> </a><li><a class="icon-link nav-link-text" href=https://www.youtube.com/channel/UCuUTv3O40RzriuN1gQ7ygbw> <i class="lab la-youtube"></i> </a><li><a class="icon-link nav-link-text e--" href=/please-turn-on-javascript id=e> <i class="las la-envelope"></i> </a></li><script defer>const pieces1 = ["ma", "il", "to", ":", "m", "lo", "to", "usa"];
+				const pieces2 = ["gma", "il", ".", "com"];
+				// const el = document.getElementById("e");
+				const elements = document.querySelectorAll(".e--")
+				for (el of elements)
+					el.href=[pieces1.join(""), pieces2.join("")].join("@");</script></ul></div></div></footer></div>

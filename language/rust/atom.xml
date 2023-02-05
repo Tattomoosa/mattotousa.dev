@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - Rust</title>
+	<link href="https://mattotousa.dev/language/rust/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://mattotousa.dev"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2019-08-21T00:00:00+00:00</updated>
+	<id>https://mattotousa.dev/language/rust/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Prowl</title>
+		<published>2019-08-21T00:00:00+00:00</published>
+		<updated>2019-08-21T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://mattotousa.dev/projects/prowl/" type="text/html"/>
+		<id>https://mattotousa.dev/projects/prowl/</id>
+		<content type="html">&lt;p&gt;Prowl is an experiment with procedural generation written in Rust by Matt O&#x27;Tousa and John Bedette for Bart Massey&#x27;s Summer 2019 Rust course at Portland State University.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
